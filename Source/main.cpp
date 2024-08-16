@@ -3,9 +3,38 @@
 #include <stdio.h>
 #include <SDL.h>
 
+#include <cstdint>
+
 #include "Game.h"
+#include "Types.h"
+
+Game* game = nullptr;
 
 int main(int argc, char* args[])
 {
+    Uint64 next_tick = SDL_GetTicks64();
+    int loops;
+    float interpolation;
+
+    game = new Game();
+    game->init("BAI Connections", (Vec2<int>) {SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED}, SCREEN_SIZE, false);
+
+    while (game->isRunning())
+    {
+        loops = 0;
+        while (SDL_GetTicks64() > next_tick && loops < MAX_FRAME_SKIP)
+        {
+            game->processInput();
+            game->update();
+
+            next_tick += TICK_DELAY;
+            loops++;
+        }
+
+        interpolation = float (SDL_GetTicks64() + TICK_DELAY - next_tick) / float (TICK_DELAY);
+        game->render(interpolation);
+    }
+
+    game->quit();
     return 0;
 }
