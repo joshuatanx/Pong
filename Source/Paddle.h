@@ -5,12 +5,15 @@
 
 #include "Types.h"
 
+#include <unordered_map>
+
 class Paddle
 {
 private:
     Vec2<int> position;
     Vec2<int> size;
     Colour colour;
+    Direction direction = None;
 
 public:
     Paddle(const Vec2<int> position = (Vec2<int>) {0, 0}, const Vec2<int> size = (Vec2<int>) {50, 50}, const Colour = (Colour) {0, 0, 0, 255});
@@ -24,6 +27,10 @@ public:
     Colour getColour();
     void setColour(const Colour colour);
 
+    Direction getDirection();
+    void setDirection(const Direction direction);
+
+    void processInput(const std::unordered_map<SDL_KeyCode, bool> keyboard_state);
     void render(const float interpolation);
 };
 

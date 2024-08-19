@@ -153,6 +153,30 @@ Source/Game.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Pong.dir/build.make CMakeFiles/Pong.dir/Source/Game.cpp.s
 .PHONY : Source/Game.cpp.s
 
+Source/InputHandler.o: Source/InputHandler.cpp.o
+.PHONY : Source/InputHandler.o
+
+# target to build an object file
+Source/InputHandler.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Pong.dir/build.make CMakeFiles/Pong.dir/Source/InputHandler.cpp.o
+.PHONY : Source/InputHandler.cpp.o
+
+Source/InputHandler.i: Source/InputHandler.cpp.i
+.PHONY : Source/InputHandler.i
+
+# target to preprocess a source file
+Source/InputHandler.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Pong.dir/build.make CMakeFiles/Pong.dir/Source/InputHandler.cpp.i
+.PHONY : Source/InputHandler.cpp.i
+
+Source/InputHandler.s: Source/InputHandler.cpp.s
+.PHONY : Source/InputHandler.s
+
+# target to generate assembly for a file
+Source/InputHandler.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Pong.dir/build.make CMakeFiles/Pong.dir/Source/InputHandler.cpp.s
+.PHONY : Source/InputHandler.cpp.s
+
 Source/Paddle.o: Source/Paddle.cpp.o
 .PHONY : Source/Paddle.o
 
@@ -213,6 +237,9 @@ help:
 	@echo "... Source/Game.o"
 	@echo "... Source/Game.i"
 	@echo "... Source/Game.s"
+	@echo "... Source/InputHandler.o"
+	@echo "... Source/InputHandler.i"
+	@echo "... Source/InputHandler.s"
 	@echo "... Source/Paddle.o"
 	@echo "... Source/Paddle.i"
 	@echo "... Source/Paddle.s"

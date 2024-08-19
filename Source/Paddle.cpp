@@ -5,6 +5,7 @@
 #include <SDL.h>
 
 #include "Game.h"
+#include "InputHandler.h"
 
 Paddle::Paddle(const Vec2<int> position, const Vec2<int> size, const Colour colour)
 {
@@ -41,6 +42,35 @@ Colour Paddle::getColour()
 void Paddle::setColour(const Colour colour)
 {
     this->colour = colour;
+}
+
+Direction Paddle::getDirection()
+{
+    return direction;
+}
+
+void Paddle::setDirection(const Direction direction)
+{
+    this->direction = direction;
+}
+
+
+void Paddle::processInput(const std::unordered_map<SDL_KeyCode, bool> keyboard_state)
+{
+    if (InputHandler::isActive(SDLK_a) && !InputHandler::isActive(SDLK_d))
+    {
+        direction = Left;
+        printf("left\n");
+    }
+    else if (InputHandler::isActive(SDLK_d) && !InputHandler::isActive(SDLK_a))
+    {
+        direction = Right;
+        printf("right\n");
+    }
+    else
+    {
+        direction = None;
+    }
 }
 
 void Paddle::render(const float interpolation)

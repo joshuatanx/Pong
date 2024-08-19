@@ -7,6 +7,8 @@
 #include <stdexcept>
 #include <vector>
 
+#include "InputHandler.h"
+
 SDL_Renderer* Game::renderer = nullptr;
 Vec2<uint8_t> Game::screen_size;
 
@@ -60,6 +62,9 @@ bool Game::init(const std::string title, const Vec2<int> position, const Vec2<in
     SDL_SetRenderDrawColor(renderer, 255, 255, 255, 255);
     printf("Renderer initialized.\n");
 
+    // Initialize input handler
+    InputHandler::init();
+
     run_status = true;
     printf("Game initialized.\n");
     
@@ -77,7 +82,38 @@ void Game::processInput()
 
     while (SDL_PollEvent(&event))
     {
-        switch (event.type)
+        if (event.type == SDL_QUIT)
+        {
+            run_status = false;
+        }
+
+        InputHandler::processKeyboard(event);
+
+        if (InputHandler::keyboard_state.count(SDLK_ESCAPE) && InputHandler::keyboard_state.at(SDLK_ESCAPE))
+        {
+            run_status = false;
+        }
+
+        player.processInput(InputHandler::keyboard_state);
+
+        /* const Uint8* keyboard_state = SDL_GetKeyboardState(NULL);
+        if (event.type == SDL_KEYDOWN || event.type == SDL_KEYUP)
+        {
+            if (event.key.keysym.sym == SDLK_ESCAPE)
+            {
+                run_status = false;
+            }
+             if (event.key.keysym.sym == SDLK_ESCAPE)
+            {
+                run_status = false;
+            }
+            else
+            {
+                player.processInput(event);
+            }
+        } */
+
+        /* switch (event.type)
         {
         case SDL_QUIT:
             run_status = false;
@@ -96,9 +132,7 @@ void Game::processInput()
 
         default:
             break;
-        }
-
-        // call input handler once i create the input handler
+        } */        
     }
 }
 
@@ -109,11 +143,11 @@ void Game::update()
 
 void Game::render(const float interpolation)
 {
-    //  Clear screen/set background
+    // Clear screen/set background
     SDL_SetRenderDrawColor(renderer, 0, 0, 0, 255);
     SDL_RenderClear(renderer);
 
-    //  Render objects
+    // Render objects
     player.render(interpolation);
 
     SDL_RenderPresent(renderer);

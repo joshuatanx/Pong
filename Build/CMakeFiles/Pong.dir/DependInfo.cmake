@@ -9,6 +9,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/Users/joshuatan/Documents/Programming/C++/Pong/Source/Game.cpp" "CMakeFiles/Pong.dir/Source/Game.cpp.o" "gcc" "CMakeFiles/Pong.dir/Source/Game.cpp.o.d"
+  "/Users/joshuatan/Documents/Programming/C++/Pong/Source/InputHandler.cpp" "CMakeFiles/Pong.dir/Source/InputHandler.cpp.o" "gcc" "CMakeFiles/Pong.dir/Source/InputHandler.cpp.o.d"
   "/Users/joshuatan/Documents/Programming/C++/Pong/Source/Paddle.cpp" "CMakeFiles/Pong.dir/Source/Paddle.cpp.o" "gcc" "CMakeFiles/Pong.dir/Source/Paddle.cpp.o.d"
   "/Users/joshuatan/Documents/Programming/C++/Pong/Source/main.cpp" "CMakeFiles/Pong.dir/Source/main.cpp.o" "gcc" "CMakeFiles/Pong.dir/Source/main.cpp.o.d"
   )

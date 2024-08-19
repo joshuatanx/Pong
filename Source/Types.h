@@ -41,6 +41,14 @@ struct Colour
     uint8_t a;
 };
 
+// Movement
+enum Direction
+{
+    Left,
+    None,
+    Right
+};
+
 // Screen info
 const int SCREEN_WIDTH = 256;
 const int SCREEN_HEIGHT = 256;
