@@ -5,7 +5,9 @@
 
 #include <SDL.h>
 #include <string>
+#include <vector>
 
+#include "Paddle.h"
 #include "Types.h"
 
 class Game
@@ -13,7 +15,7 @@ class Game
 public:
     bool init(const std::string title, const Vec2<int> position, const Vec2<int> size, const bool fullscreen = false);
 
-    void startGame();
+    void start();
 
     void processInput();
     void update();
@@ -28,6 +30,8 @@ public:
     static SDL_Renderer* renderer;
     static Vec2<uint8_t> screen_size;
     static Vec2<uint8_t> window_size;
+
+    static Paddle player;
 
 private:
     bool run_status;

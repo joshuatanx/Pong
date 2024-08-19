@@ -10,8 +10,11 @@
 SDL_Renderer* Game::renderer = nullptr;
 Vec2<uint8_t> Game::screen_size;
 
+Paddle Game::player((Vec2<int>) {0, 0}, (Vec2<int>) {100, 25}, (Colour) {255, 255, 255});
+
 bool Game::init(const std::string title, const Vec2<int> position, const Vec2<int> size, const bool fullscreen)
 {
+    printf("%i\n", player.getPosition().x);
     int flags = SDL_WINDOW_SHOWN | SDL_WINDOW_RESIZABLE | SDL_WINDOW_ALLOW_HIGHDPI;
     run_status = false;
 
@@ -63,6 +66,11 @@ bool Game::init(const std::string title, const Vec2<int> position, const Vec2<in
     return true;
 }
 
+void Game::start()
+{
+
+}
+
 void Game::processInput()
 {
     SDL_Event event;
@@ -101,7 +109,14 @@ void Game::update()
 
 void Game::render(const float interpolation)
 {
+    //  Clear screen/set background
+    SDL_SetRenderDrawColor(renderer, 0, 0, 0, 255);
     SDL_RenderClear(renderer);
+
+    //  Render objects
+    player.render(interpolation);
+
+    SDL_RenderPresent(renderer);
 }
 
 void Game::quit()
