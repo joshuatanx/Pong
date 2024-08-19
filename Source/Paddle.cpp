@@ -54,6 +54,12 @@ void Paddle::setDirection(const Direction direction)
     this->direction = direction;
 }
 
+void Paddle::move(const Vec2<int> displacement)
+{
+    position.x += displacement.x;
+    position.y += displacement.y;
+}
+
 
 void Paddle::processInput(const std::unordered_map<SDL_KeyCode, bool> keyboard_state)
 {
@@ -70,6 +76,23 @@ void Paddle::processInput(const std::unordered_map<SDL_KeyCode, bool> keyboard_s
     else
     {
         direction = None;
+    }
+}
+
+void Paddle::update()
+{
+    switch (direction)
+    {
+    case Left:
+        move((Vec2<int>) {-5, 0});
+        break;
+
+    case Right:
+        move((Vec2<int>) {5, 0});
+        break;
+    
+    default:
+        break;
     }
 }
 

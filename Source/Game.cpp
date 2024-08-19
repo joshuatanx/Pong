@@ -94,51 +94,13 @@ void Game::processInput()
             run_status = false;
         }
 
-        player.processInput(InputHandler::keyboard_state);
-
-        /* const Uint8* keyboard_state = SDL_GetKeyboardState(NULL);
-        if (event.type == SDL_KEYDOWN || event.type == SDL_KEYUP)
-        {
-            if (event.key.keysym.sym == SDLK_ESCAPE)
-            {
-                run_status = false;
-            }
-             if (event.key.keysym.sym == SDLK_ESCAPE)
-            {
-                run_status = false;
-            }
-            else
-            {
-                player.processInput(event);
-            }
-        } */
-
-        /* switch (event.type)
-        {
-        case SDL_QUIT:
-            run_status = false;
-            break;
-
-        case SDL_KEYDOWN:
-            switch (event.key.keysym.sym)
-            {
-            case SDLK_ESCAPE:
-                run_status = false;
-                break;
-
-            default:
-                break;
-            }
-
-        default:
-            break;
-        } */        
+        player.processInput(InputHandler::keyboard_state);      
     }
 }
 
 void Game::update()
 {
-
+    player.update();
 }
 
 void Game::render(const float interpolation)

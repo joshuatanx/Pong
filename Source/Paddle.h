@@ -30,7 +30,10 @@ public:
     Direction getDirection();
     void setDirection(const Direction direction);
 
+    void move(const Vec2<int> displacement);
+
     void processInput(const std::unordered_map<SDL_KeyCode, bool> keyboard_state);
+    void update();
     void render(const float interpolation);
 };
 
