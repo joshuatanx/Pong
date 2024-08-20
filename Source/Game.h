@@ -32,6 +32,7 @@ public:
     static Vec2<uint8_t> window_size;
 
     static Paddle player;
+    static Paddle enemy;
 
 private:
     bool run_status;

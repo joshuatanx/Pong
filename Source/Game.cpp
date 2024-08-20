@@ -12,12 +12,13 @@
 SDL_Renderer* Game::renderer = nullptr;
 Vec2<uint8_t> Game::screen_size;
 
-Paddle Game::player((Vec2<int>) {0, 0}, (Vec2<int>) {100, 25}, (Colour) {255, 255, 255});
+Paddle Game::player;
+Paddle Game::enemy;
 
 bool Game::init(const std::string title, const Vec2<int> position, const Vec2<int> size, const bool fullscreen)
 {
-    printf("%i\n", player.getPosition().x);
     int flags = SDL_WINDOW_SHOWN | SDL_WINDOW_RESIZABLE | SDL_WINDOW_ALLOW_HIGHDPI;
+    
     run_status = false;
 
     if (fullscreen)
@@ -64,6 +65,7 @@ bool Game::init(const std::string title, const Vec2<int> position, const Vec2<in
 
     // Initialize input handler
     InputHandler::init();
+    printf("Input handler initialized.\n");
 
     run_status = true;
     printf("Game initialized.\n");
@@ -73,7 +75,8 @@ bool Game::init(const std::string title, const Vec2<int> position, const Vec2<in
 
 void Game::start()
 {
-
+    player.init(Player1, (Vec2<int>) {0, 250}, (Vec2<int>) {20, 100}, (Colour) {255, 255, 255});
+    enemy.init(Player2, (Vec2<int>) {580, 250}, (Vec2<int>) {20, 100}, (Colour) {255, 255, 255});
 }
 
 void Game::processInput()
@@ -95,12 +98,14 @@ void Game::processInput()
         }
 
         player.processInput(InputHandler::keyboard_state);      
+        enemy.processInput(InputHandler::keyboard_state);
     }
 }
 
 void Game::update()
 {
     player.update();
+    enemy.update();
 }
 
 void Game::render(const float interpolation)
@@ -111,6 +116,7 @@ void Game::render(const float interpolation)
 
     // Render objects
     player.render(interpolation);
+    enemy.render(interpolation);
 
     SDL_RenderPresent(renderer);
 }

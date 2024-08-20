@@ -44,14 +44,25 @@ struct Colour
 // Movement
 enum Direction
 {
-    Left,
     None,
+    Up,
+    Down,
+    Left,
     Right
 };
 
+// Paddles
+enum PaddleType
+{
+    Player1,
+    Player2,
+    CPU1,
+    CPU2
+};
+
 // Screen info
-const int SCREEN_WIDTH = 256;
-const int SCREEN_HEIGHT = 256;
+const int SCREEN_WIDTH = 300;
+const int SCREEN_HEIGHT = 300;
 const Vec2<int> SCREEN_SIZE = {SCREEN_WIDTH, SCREEN_HEIGHT};
 
 // Game loop

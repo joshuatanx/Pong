@@ -7,11 +7,30 @@
 #include "Game.h"
 #include "InputHandler.h"
 
-Paddle::Paddle(const Vec2<int> position, const Vec2<int> size, const Colour colour)
+Paddle::Paddle(const PaddleType paddle_type, const Vec2<int> position, const Vec2<int> size, const Colour colour)
 {
+    this->paddle_type = paddle_type;
     this->position = position;
     this->size = size;
     this->colour = colour;
+}
+
+void Paddle::init(const PaddleType paddle_type, const Vec2<int> position, const Vec2<int> size, const Colour colour)
+{
+    this->paddle_type = paddle_type;
+    this->position = position;
+    this->size = size;
+    this->colour = colour;
+}
+
+PaddleType Paddle::getPaddleType()
+{
+    return paddle_type;
+}
+
+void Paddle::setPaddleType(const PaddleType paddle_type)
+{
+    this->paddle_type = paddle_type;
 }
 
 Vec2<int> Paddle::getPosition()
@@ -63,15 +82,30 @@ void Paddle::move(const Vec2<int> displacement)
 
 void Paddle::processInput(const std::unordered_map<SDL_KeyCode, bool> keyboard_state)
 {
-    if (InputHandler::isActive(SDLK_a) && !InputHandler::isActive(SDLK_d))
+    SDL_KeyCode up_key, down_key;
+    switch (paddle_type)
     {
-        direction = Left;
-        printf("left\n");
+    case Player1:
+        up_key = SDLK_w;
+        down_key = SDLK_s;
+        break;
+    
+    case Player2:
+        up_key = SDLK_UP;
+        down_key = SDLK_DOWN;
+        break;
+    
+    default:
+        return;
     }
-    else if (InputHandler::isActive(SDLK_d) && !InputHandler::isActive(SDLK_a))
+
+    if (InputHandler::isActive(up_key) && !InputHandler::isActive(down_key))
     {
-        direction = Right;
-        printf("right\n");
+        direction = Up;
+    }
+    else if (InputHandler::isActive(down_key) && !InputHandler::isActive(up_key))
+    {
+        direction = Down;
     }
     else
     {
@@ -83,12 +117,12 @@ void Paddle::update()
 {
     switch (direction)
     {
-    case Left:
-        move((Vec2<int>) {-5, 0});
+    case Up:
+        move((Vec2<int>) {0, -5});
         break;
 
-    case Right:
-        move((Vec2<int>) {5, 0});
+    case Down:
+        move((Vec2<int>) {0, 5});
         break;
     
     default:
@@ -100,6 +134,7 @@ void Paddle::render(const float interpolation)
 {
     SDL_Rect rect = {position.x, position.y, size.x, size.y};
 
+    printf("%i, %i\n", position.x, position.y);
     SDL_SetRenderDrawColor(Game::renderer, colour.r, colour.g, colour.b, colour.a);
     SDL_RenderFillRect(Game::renderer, &rect);
 }

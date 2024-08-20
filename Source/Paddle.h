@@ -10,13 +10,18 @@
 class Paddle
 {
 private:
+    PaddleType paddle_type;
     Vec2<int> position;
     Vec2<int> size;
     Colour colour;
     Direction direction = None;
 
 public:
-    Paddle(const Vec2<int> position = (Vec2<int>) {0, 0}, const Vec2<int> size = (Vec2<int>) {50, 50}, const Colour = (Colour) {0, 0, 0, 255});
+    Paddle(const PaddleType paddle_type = Player1, const Vec2<int> position = (Vec2<int>) {0, 0}, const Vec2<int> size = (Vec2<int>) {50, 50}, const Colour colour = (Colour) {0, 0, 0, 255});
+    void init(const PaddleType paddle_type = Player1, const Vec2<int> position = (Vec2<int>) {0, 0}, const Vec2<int> size = (Vec2<int>) {50, 50}, const Colour colour = (Colour) {0, 0, 0, 255});
+
+    PaddleType getPaddleType();
+    void setPaddleType(const PaddleType paddle_type);
 
     Vec2<int> getPosition();
     void setPosition(const Vec2<int> position);
