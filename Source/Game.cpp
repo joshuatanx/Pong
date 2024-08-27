@@ -14,6 +14,7 @@ Vec2<uint8_t> Game::screen_size;
 
 Paddle Game::player;
 Paddle Game::enemy;
+Ball Game::ball;
 
 bool Game::init(const std::string title, const Vec2<int> position, const Vec2<int> size, const bool fullscreen)
 {
@@ -75,8 +76,9 @@ bool Game::init(const std::string title, const Vec2<int> position, const Vec2<in
 
 void Game::start()
 {
-    player.init(Player1, (Vec2<int>) {0, 250}, (Vec2<int>) {20, 100}, (Colour) {255, 255, 255});
-    enemy.init(Player2, (Vec2<int>) {580, 250}, (Vec2<int>) {20, 100}, (Colour) {255, 255, 255});
+    player.init(Player1, (Vec2<int>) {0, 250}, (Vec2<unsigned int>) {20, 100}, (Colour) {255, 255, 255});
+    enemy.init(Player2, (Vec2<int>) {580, 250}, (Vec2<unsigned int>) {20, 100}, (Colour) {255, 255, 255});
+    ball.init((Vec2<int>) {150, 150}, (Vec2<unsigned int>) {25, 25}, (Colour) {255, 255, 255});
 }
 
 void Game::processInput()
@@ -106,6 +108,7 @@ void Game::update()
 {
     player.update();
     enemy.update();
+    ball.update();
 }
 
 void Game::render(const float interpolation)
@@ -117,6 +120,7 @@ void Game::render(const float interpolation)
     // Render objects
     player.render(interpolation);
     enemy.render(interpolation);
+    ball.render(interpolation);
 
     SDL_RenderPresent(renderer);
 }

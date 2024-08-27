@@ -16,6 +16,7 @@ include_directories("/opt/homebrew/Cellar/sdl2_image/2.8.1/include/SDL2") # non-
 # Group .cpp files
 set(SOURCE_FILES_MAIN
     Source/main.cpp
+    Source/Ball.cpp
     Source/Game.cpp
     Source/InputHandler.cpp
     Source/Paddle.cpp

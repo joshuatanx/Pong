@@ -129,6 +129,30 @@ Pong/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Pong.dir/build.make CMakeFiles/Pong.dir/build
 .PHONY : Pong/fast
 
+Source/Ball.o: Source/Ball.cpp.o
+.PHONY : Source/Ball.o
+
+# target to build an object file
+Source/Ball.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Pong.dir/build.make CMakeFiles/Pong.dir/Source/Ball.cpp.o
+.PHONY : Source/Ball.cpp.o
+
+Source/Ball.i: Source/Ball.cpp.i
+.PHONY : Source/Ball.i
+
+# target to preprocess a source file
+Source/Ball.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Pong.dir/build.make CMakeFiles/Pong.dir/Source/Ball.cpp.i
+.PHONY : Source/Ball.cpp.i
+
+Source/Ball.s: Source/Ball.cpp.s
+.PHONY : Source/Ball.s
+
+# target to generate assembly for a file
+Source/Ball.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Pong.dir/build.make CMakeFiles/Pong.dir/Source/Ball.cpp.s
+.PHONY : Source/Ball.cpp.s
+
 Source/Game.o: Source/Game.cpp.o
 .PHONY : Source/Game.o
 
@@ -234,6 +258,9 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... Pong"
+	@echo "... Source/Ball.o"
+	@echo "... Source/Ball.i"
+	@echo "... Source/Ball.s"
 	@echo "... Source/Game.o"
 	@echo "... Source/Game.i"
 	@echo "... Source/Game.s"

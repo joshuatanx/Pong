@@ -83,10 +83,24 @@ CMakeFiles/Pong.dir/Source/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/Pong.dir/Source/main.cpp.s"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/joshuatan/Documents/Programming/C++/Pong/Source/main.cpp -o CMakeFiles/Pong.dir/Source/main.cpp.s
 
+CMakeFiles/Pong.dir/Source/Ball.cpp.o: CMakeFiles/Pong.dir/flags.make
+CMakeFiles/Pong.dir/Source/Ball.cpp.o: /Users/joshuatan/Documents/Programming/C++/Pong/Source/Ball.cpp
+CMakeFiles/Pong.dir/Source/Ball.cpp.o: CMakeFiles/Pong.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/joshuatan/Documents/Programming/C++/Pong/Build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/Pong.dir/Source/Ball.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Pong.dir/Source/Ball.cpp.o -MF CMakeFiles/Pong.dir/Source/Ball.cpp.o.d -o CMakeFiles/Pong.dir/Source/Ball.cpp.o -c /Users/joshuatan/Documents/Programming/C++/Pong/Source/Ball.cpp
+
+CMakeFiles/Pong.dir/Source/Ball.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/Pong.dir/Source/Ball.cpp.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/joshuatan/Documents/Programming/C++/Pong/Source/Ball.cpp > CMakeFiles/Pong.dir/Source/Ball.cpp.i
+
+CMakeFiles/Pong.dir/Source/Ball.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/Pong.dir/Source/Ball.cpp.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/joshuatan/Documents/Programming/C++/Pong/Source/Ball.cpp -o CMakeFiles/Pong.dir/Source/Ball.cpp.s
+
 CMakeFiles/Pong.dir/Source/Game.cpp.o: CMakeFiles/Pong.dir/flags.make
 CMakeFiles/Pong.dir/Source/Game.cpp.o: /Users/joshuatan/Documents/Programming/C++/Pong/Source/Game.cpp
 CMakeFiles/Pong.dir/Source/Game.cpp.o: CMakeFiles/Pong.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/joshuatan/Documents/Programming/C++/Pong/Build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/Pong.dir/Source/Game.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/joshuatan/Documents/Programming/C++/Pong/Build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/Pong.dir/Source/Game.cpp.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Pong.dir/Source/Game.cpp.o -MF CMakeFiles/Pong.dir/Source/Game.cpp.o.d -o CMakeFiles/Pong.dir/Source/Game.cpp.o -c /Users/joshuatan/Documents/Programming/C++/Pong/Source/Game.cpp
 
 CMakeFiles/Pong.dir/Source/Game.cpp.i: cmake_force
@@ -100,7 +114,7 @@ CMakeFiles/Pong.dir/Source/Game.cpp.s: cmake_force
 CMakeFiles/Pong.dir/Source/InputHandler.cpp.o: CMakeFiles/Pong.dir/flags.make
 CMakeFiles/Pong.dir/Source/InputHandler.cpp.o: /Users/joshuatan/Documents/Programming/C++/Pong/Source/InputHandler.cpp
 CMakeFiles/Pong.dir/Source/InputHandler.cpp.o: CMakeFiles/Pong.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/joshuatan/Documents/Programming/C++/Pong/Build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/Pong.dir/Source/InputHandler.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/joshuatan/Documents/Programming/C++/Pong/Build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/Pong.dir/Source/InputHandler.cpp.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Pong.dir/Source/InputHandler.cpp.o -MF CMakeFiles/Pong.dir/Source/InputHandler.cpp.o.d -o CMakeFiles/Pong.dir/Source/InputHandler.cpp.o -c /Users/joshuatan/Documents/Programming/C++/Pong/Source/InputHandler.cpp
 
 CMakeFiles/Pong.dir/Source/InputHandler.cpp.i: cmake_force
@@ -114,7 +128,7 @@ CMakeFiles/Pong.dir/Source/InputHandler.cpp.s: cmake_force
 CMakeFiles/Pong.dir/Source/Paddle.cpp.o: CMakeFiles/Pong.dir/flags.make
 CMakeFiles/Pong.dir/Source/Paddle.cpp.o: /Users/joshuatan/Documents/Programming/C++/Pong/Source/Paddle.cpp
 CMakeFiles/Pong.dir/Source/Paddle.cpp.o: CMakeFiles/Pong.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/joshuatan/Documents/Programming/C++/Pong/Build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/Pong.dir/Source/Paddle.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/joshuatan/Documents/Programming/C++/Pong/Build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/Pong.dir/Source/Paddle.cpp.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Pong.dir/Source/Paddle.cpp.o -MF CMakeFiles/Pong.dir/Source/Paddle.cpp.o.d -o CMakeFiles/Pong.dir/Source/Paddle.cpp.o -c /Users/joshuatan/Documents/Programming/C++/Pong/Source/Paddle.cpp
 
 CMakeFiles/Pong.dir/Source/Paddle.cpp.i: cmake_force
@@ -128,6 +142,7 @@ CMakeFiles/Pong.dir/Source/Paddle.cpp.s: cmake_force
 # Object files for target Pong
 Pong_OBJECTS = \
 "CMakeFiles/Pong.dir/Source/main.cpp.o" \
+"CMakeFiles/Pong.dir/Source/Ball.cpp.o" \
 "CMakeFiles/Pong.dir/Source/Game.cpp.o" \
 "CMakeFiles/Pong.dir/Source/InputHandler.cpp.o" \
 "CMakeFiles/Pong.dir/Source/Paddle.cpp.o"
@@ -136,6 +151,7 @@ Pong_OBJECTS = \
 Pong_EXTERNAL_OBJECTS =
 
 Pong: CMakeFiles/Pong.dir/Source/main.cpp.o
+Pong: CMakeFiles/Pong.dir/Source/Ball.cpp.o
 Pong: CMakeFiles/Pong.dir/Source/Game.cpp.o
 Pong: CMakeFiles/Pong.dir/Source/InputHandler.cpp.o
 Pong: CMakeFiles/Pong.dir/Source/Paddle.cpp.o
@@ -143,7 +159,7 @@ Pong: CMakeFiles/Pong.dir/build.make
 Pong: /opt/homebrew/Cellar/sdl2/2.28.5/lib/libSDL2.dylib
 Pong: /opt/homebrew/Cellar/sdl2_image/2.8.1/lib/libSDL2_image.dylib
 Pong: CMakeFiles/Pong.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/Users/joshuatan/Documents/Programming/C++/Pong/Build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX executable Pong"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/Users/joshuatan/Documents/Programming/C++/Pong/Build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking CXX executable Pong"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/Pong.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

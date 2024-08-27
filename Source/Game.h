@@ -7,6 +7,7 @@
 #include <string>
 #include <vector>
 
+#include "Ball.h"
 #include "Paddle.h"
 #include "Types.h"
 
@@ -33,6 +34,7 @@ public:
 
     static Paddle player;
     static Paddle enemy;
+    static Ball ball;
 
 private:
     bool run_status;
