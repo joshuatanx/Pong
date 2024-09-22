@@ -61,8 +61,8 @@ enum PaddleType
 };
 
 // Screen info
-const int SCREEN_WIDTH = 300;
-const int SCREEN_HEIGHT = 300;
+const int SCREEN_WIDTH = 600;
+const int SCREEN_HEIGHT = 600;
 const Vec2<int> SCREEN_SIZE = {SCREEN_WIDTH, SCREEN_HEIGHT};
 
 // Game loop

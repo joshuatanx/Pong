@@ -5,13 +5,15 @@
 
 #include "Types.h"
 
+#include "Paddle.h"
+
 class Ball
 {
 private:
     Vec2<int> position;
     Vec2<unsigned int> size;
     Colour colour;
-    Vec2<int> direction = {0, 0};
+    Vec2<int> velocity = {0, 0};
 
 public:
     void init(const Vec2<int> position = (Vec2<int>) {0, 0}, const Vec2<unsigned int> size = (Vec2<unsigned int>) {25, 25}, const Colour colour = (Colour) {255, 255, 255});
@@ -25,8 +27,13 @@ public:
     Colour getColour();
     void setColour(const Colour colour);
 
-    Vec2<int> getDirection();
-    void setDirection(const Vec2<int> direction);
+    Vec2<int> getVelocity();
+    void setVelocity(const Vec2<int> velocity);
+
+    Direction collisionWithPaddle(Paddle paddle);
+    Direction collisionWithWall(const int screen_height);
+    Direction outOfBounds(const int screen_width);
+    void handleCollision();
 
     void move(const Vec2<int> displacement);
     void update();

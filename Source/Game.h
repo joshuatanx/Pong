@@ -32,6 +32,7 @@ public:
     static Vec2<uint8_t> screen_size;
     static Vec2<uint8_t> window_size;
 
+    static std::vector<Paddle> paddles;
     static Paddle player;
     static Paddle enemy;
     static Ball ball;

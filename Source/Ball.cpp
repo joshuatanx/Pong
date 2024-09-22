@@ -43,15 +43,95 @@ void Ball::setColour(const Colour colour)
     this->colour = colour;
 }
 
-Vec2<int> Ball::getDirection()
+Vec2<int> Ball::getVelocity()
 {
-    return direction;
+    return velocity;
 }
 
-void Ball::setDirection(const Vec2<int> direction)
+void Ball::setVelocity(const Vec2<int> velocity)
 {
-    this->direction = direction;
+    this->velocity = velocity;
 }
+
+
+// Returns side of ball that experiences collision
+Direction Ball::collisionWithPaddle(Paddle paddle)
+{
+    PaddleType paddle_type = paddle.getPaddleType();
+    Vec2<int> paddle_position = paddle.getPosition();
+    Vec2<unsigned int> paddle_size = paddle.getSize();
+    
+    // If the ball is at the same y-position as the paddle
+    if (!(position.y <= paddle_position.y + paddle_size.y && position.y >= paddle_position.y) &&
+    !(position.y + size.y <= paddle_position.y + paddle_size.y && position.y + size.y >= paddle_position.y))
+    {
+        return None;
+    }
+
+    if (paddle_type == Player1)
+    {
+        if (velocity.x < 0 && position.x <= paddle_position.x + paddle_size.x && position.x >= paddle_position.x)
+        {
+            return Left;
+        }
+    }
+
+    if (paddle_type == Player2)
+    {
+        if (velocity.x > 0 && position.x + size.x >= paddle_position.x && position.x + size.x <= paddle_position.x + paddle_size.x)
+        {
+            return Right;
+        }
+    }
+
+    if (position.x + size.x >= paddle_position.x && position.x <= paddle_position.x + static_cast<int>(paddle_size.x)
+    && position.y >= paddle_position.y && position.y <= paddle_position.y + static_cast<int>(paddle_size.y))
+    {
+        return None;
+    }
+    return None;
+}
+
+Direction Ball::collisionWithWall(const int screen_height)
+{
+    if (position.y <= 0)
+    {
+        return Up;
+    }
+    else if (position.y + size.y >= screen_height)
+    {
+        return Down;
+    }
+    return None;
+}
+
+Direction Ball::outOfBounds(const int screen_width)
+{
+    if (position.x <= 0)
+    {
+        return Left;
+    }
+    else if (position.x + size.x >= screen_width)
+    {
+        return Right;
+    }
+
+    return None;
+}
+
+void Ball::handleCollision()
+{
+    if (collisionWithPaddle(Game::player) != None || collisionWithPaddle(Game::enemy) != None)
+    {
+        velocity.x *= -1;
+    }
+
+    if (collisionWithWall(SCREEN_HEIGHT) != None)
+    {
+        velocity.y *= -1;
+    }
+}
+
 
 void Ball::move(const Vec2<int> displacement)
 {
@@ -61,14 +141,15 @@ void Ball::move(const Vec2<int> displacement)
 
 void Ball::update()
 {
-    move(direction);
+    move(velocity);
+    handleCollision();
 }
 
 void Ball::render(const float interpolation)
 {
     SDL_Rect rect = {position.x, position.y, static_cast<int>(size.x), static_cast<int>(size.y)};
 
-    printf("%i, %i\n", position.x, position.y);
+    // printf("%i, %i\n", position.x, position.y);
     SDL_SetRenderDrawColor(Game::renderer, colour.r, colour.g, colour.b, colour.a);
     SDL_RenderFillRect(Game::renderer, &rect);
 }

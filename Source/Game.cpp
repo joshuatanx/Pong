@@ -76,9 +76,11 @@ bool Game::init(const std::string title, const Vec2<int> position, const Vec2<in
 
 void Game::start()
 {
-    player.init(Player1, (Vec2<int>) {0, 250}, (Vec2<unsigned int>) {20, 100}, (Colour) {255, 255, 255});
-    enemy.init(Player2, (Vec2<int>) {580, 250}, (Vec2<unsigned int>) {20, 100}, (Colour) {255, 255, 255});
-    ball.init((Vec2<int>) {150, 150}, (Vec2<unsigned int>) {25, 25}, (Colour) {255, 255, 255});
+    player.init(Player1, (Vec2<int>) {0, 250}, (Vec2<unsigned int>) {12, 100}, (Colour) {255, 255, 255});
+    enemy.init(Player2, (Vec2<int>) {588, 250}, (Vec2<unsigned int>) {12, 100}, (Colour) {255, 255, 255});
+    ball.init((Vec2<int>) {294, 0}, (Vec2<unsigned int>) {12, 12}, (Colour) {255, 255, 255});
+
+    ball.setVelocity((Vec2<int>) {2, 2});
 }
 
 void Game::processInput()

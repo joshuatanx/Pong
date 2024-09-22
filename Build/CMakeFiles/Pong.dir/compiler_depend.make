@@ -1600,6 +1600,7 @@ CMakeFiles/Pong.dir/Source/Game.cpp.o: /Users/joshuatan/Documents/Programming/C+
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/15.0.0/include/stdarg.h \
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/15.0.0/include/stddef.h \
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/15.0.0/include/stdint.h \
+  /Users/joshuatan/Documents/Programming/C++/Pong/Source/Ball.h \
   /Users/joshuatan/Documents/Programming/C++/Pong/Source/Game.h \
   /Users/joshuatan/Documents/Programming/C++/Pong/Source/InputHandler.h \
   /Users/joshuatan/Documents/Programming/C++/Pong/Source/Paddle.h \
@@ -3248,6 +3249,7 @@ CMakeFiles/Pong.dir/Source/Paddle.cpp.o: /Users/joshuatan/Documents/Programming/
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/15.0.0/include/stdarg.h \
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/15.0.0/include/stddef.h \
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/15.0.0/include/stdint.h \
+  /Users/joshuatan/Documents/Programming/C++/Pong/Source/Ball.h \
   /Users/joshuatan/Documents/Programming/C++/Pong/Source/Game.h \
   /Users/joshuatan/Documents/Programming/C++/Pong/Source/InputHandler.h \
   /Users/joshuatan/Documents/Programming/C++/Pong/Source/Paddle.h \
@@ -4075,6 +4077,7 @@ CMakeFiles/Pong.dir/Source/main.cpp.o: /Users/joshuatan/Documents/Programming/C+
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/15.0.0/include/stdarg.h \
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/15.0.0/include/stddef.h \
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/15.0.0/include/stdint.h \
+  /Users/joshuatan/Documents/Programming/C++/Pong/Source/Ball.h \
   /Users/joshuatan/Documents/Programming/C++/Pong/Source/Game.h \
   /Users/joshuatan/Documents/Programming/C++/Pong/Source/Paddle.h \
   /Users/joshuatan/Documents/Programming/C++/Pong/Source/Types.h \

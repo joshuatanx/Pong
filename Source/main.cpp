@@ -21,7 +21,7 @@ int main(int argc, char* args[])
     float interpolation;
 
     game = new Game();
-    game->init("Pong", (Vec2<int>) {SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED}, SCREEN_SIZE, false);
+    game->init("Pong", (Vec2<int>) {SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED}, (Vec2<int>) {SCREEN_WIDTH / 2, SCREEN_HEIGHT / 2}, false);
 
     game->start();
 

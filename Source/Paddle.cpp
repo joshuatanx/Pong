@@ -134,7 +134,7 @@ void Paddle::render(const float interpolation)
 {
     SDL_Rect rect = {position.x, position.y, static_cast<int>(size.x), static_cast<int>(size.y)};
 
-    printf("%i, %i\n", position.x, position.y);
+    // printf("%i, %i\n", position.x, position.y);
     SDL_SetRenderDrawColor(Game::renderer, colour.r, colour.g, colour.b, colour.a);
     SDL_RenderFillRect(Game::renderer, &rect);
 }
