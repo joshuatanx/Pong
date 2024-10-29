@@ -13,14 +13,18 @@ SDL_Renderer* Game::renderer = nullptr;
 Vec2<uint8_t> Game::screen_size;
 
 Paddle Game::player;
-Paddle Game::enemy;
+Paddle Game::opponent;
 Ball Game::ball;
+
+int Game::points_player;
+int Game::points_opponent;
 
 bool Game::init(const std::string title, const Vec2<int> position, const Vec2<int> size, const bool fullscreen)
 {
     int flags = SDL_WINDOW_SHOWN | SDL_WINDOW_RESIZABLE | SDL_WINDOW_ALLOW_HIGHDPI;
     
     run_status = false;
+    round_status = false;
 
     if (fullscreen)
     {
@@ -74,13 +78,26 @@ bool Game::init(const std::string title, const Vec2<int> position, const Vec2<in
     return true;
 }
 
-void Game::start()
+void Game::newGame()
+{
+    points_player = 0;
+    points_opponent = 0;
+    reset();
+}
+
+void Game::reset()
 {
     player.init(Player1, (Vec2<int>) {0, 250}, (Vec2<unsigned int>) {12, 100}, (Colour) {255, 255, 255});
-    enemy.init(Player2, (Vec2<int>) {588, 250}, (Vec2<unsigned int>) {12, 100}, (Colour) {255, 255, 255});
+    opponent.init(Player2, (Vec2<int>) {588, 250}, (Vec2<unsigned int>) {12, 100}, (Colour) {255, 255, 255});
     ball.init((Vec2<int>) {294, 0}, (Vec2<unsigned int>) {12, 12}, (Colour) {255, 255, 255});
 
-    ball.setVelocity((Vec2<int>) {2, 2});
+    round_status = false;
+}
+
+void Game::start()
+{
+    ball.setVelocity((Vec2<int>) {5, 5});
+    round_status = true;
 }
 
 void Game::processInput()
@@ -96,21 +113,30 @@ void Game::processInput()
 
         InputHandler::processKeyboard(event);
 
-        if (InputHandler::keyboard_state.count(SDLK_ESCAPE) && InputHandler::keyboard_state.at(SDLK_ESCAPE))
+        if (InputHandler::isActive(SDLK_ESCAPE))
         {
             run_status = false;
+            round_status = false;
         }
 
         player.processInput(InputHandler::keyboard_state);      
-        enemy.processInput(InputHandler::keyboard_state);
+        opponent.processInput(InputHandler::keyboard_state);
+
+        if (round_status == false && player.getDirection() != Direction::None)
+        {
+            start();
+        }
     }
 }
 
 void Game::update()
 {
     player.update();
-    enemy.update();
-    ball.update();
+    opponent.update();
+    if (ball.update())
+    {
+        reset();
+    }
 }
 
 void Game::render(const float interpolation)
@@ -121,7 +147,7 @@ void Game::render(const float interpolation)
 
     // Render objects
     player.render(interpolation);
-    enemy.render(interpolation);
+    opponent.render(interpolation);
     ball.render(interpolation);
 
     SDL_RenderPresent(renderer);

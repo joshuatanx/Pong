@@ -121,7 +121,7 @@ Direction Ball::outOfBounds(const int screen_width)
 
 void Ball::handleCollision()
 {
-    if (collisionWithPaddle(Game::player) != None || collisionWithPaddle(Game::enemy) != None)
+    if (collisionWithPaddle(Game::player) != None || collisionWithPaddle(Game::opponent) != None)
     {
         velocity.x *= -1;
     }
@@ -132,6 +132,39 @@ void Ball::handleCollision()
     }
 }
 
+bool Ball::updateScore()
+{
+    Direction out = outOfBounds(SCREEN_WIDTH);
+    if (out == Direction::None)
+    {
+        return false;
+    }
+
+    switch (outOfBounds(SCREEN_WIDTH))
+    {
+    case Direction::Left:
+        Game::points_opponent++;
+        printf("P2 Point!");
+        break;
+    
+    case Direction::Right:
+        Game::points_player++;
+        printf("P1 Point!");
+        break;
+    
+    default:
+        break;
+    }
+
+    return true;
+}
+
+
+void Ball::reset()
+{
+    position = (Vec2<int>) {294, 0};
+    velocity = (Vec2<int>) {0, 0};
+}
 
 void Ball::move(const Vec2<int> displacement)
 {
@@ -139,10 +172,16 @@ void Ball::move(const Vec2<int> displacement)
     position.y += displacement.y;
 }
 
-void Ball::update()
+bool Ball::update()
 {
     move(velocity);
     handleCollision();
+    if (updateScore())
+    {
+        reset();
+        return true;
+    }
+    return false;
 }
 
 void Ball::render(const float interpolation)

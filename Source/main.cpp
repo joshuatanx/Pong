@@ -23,7 +23,7 @@ int main(int argc, char* args[])
     game = new Game();
     game->init("Pong", (Vec2<int>) {SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED}, (Vec2<int>) {SCREEN_WIDTH / 2, SCREEN_HEIGHT / 2}, false);
 
-    game->start();
+    game->newGame();
 
     while (game->isRunning())
     {

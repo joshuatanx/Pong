@@ -35,8 +35,11 @@ public:
     Direction outOfBounds(const int screen_width);
     void handleCollision();
 
+    bool updateScore();
+
+    void reset();
     void move(const Vec2<int> displacement);
-    void update();
+    bool update();
     void render(const float interpolation);
 };
 
