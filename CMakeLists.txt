@@ -19,6 +19,7 @@ set(SOURCE_FILES_MAIN
     Source/Ball.cpp
     Source/Game.cpp
     Source/InputHandler.cpp
+    Source/Interface.cpp
     Source/Paddle.cpp
 )
 

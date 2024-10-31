@@ -162,7 +162,7 @@ bool Ball::updateScore()
 
 void Ball::reset()
 {
-    position = (Vec2<int>) {294, 0};
+    position = (Vec2<int>) {(SCREEN_WIDTH - static_cast<int>(size.x)) / 2, (SCREEN_HEIGHT - static_cast<int>(size.y)) / 2};
     velocity = (Vec2<int>) {0, 0};
 }
 
