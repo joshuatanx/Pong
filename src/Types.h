@@ -6,6 +6,7 @@
 #include <cstddef>
 #include <cstdint>
 #include <SDL.h>
+#include <string>
 
 // Vectors
 template <typename T>
@@ -62,6 +63,7 @@ enum PaddleType
 
 // Graphics
 using TextureID = std::size_t;
+using StyledText = Vec2<std::string>; // (text, font style name)
 
 // Screen info
 const int SCREEN_WIDTH = 600;

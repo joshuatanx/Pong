@@ -4,10 +4,13 @@
 
 #include <cstdint>
 #include <memory>
+#include <SDL_image.h>
+#include <SDL_ttf.h>
 #include <stdexcept>
 #include <vector>
 
 #include "InputHandler.h"
+#include "TextureManager.h"
 
 SDL_Renderer* Game::renderer = nullptr;
 Vec2<uint8_t> Game::screen_size;
@@ -62,7 +65,7 @@ bool Game::init(const std::string title, const Vec2<int> position, const Vec2<in
     renderer = SDL_CreateRenderer(window, -1, SDL_RENDERER_PRESENTVSYNC);
     if (renderer == NULL)
     {
-        printf("Renderer could not be initialized. SDL_ERROR: %s\n.", SDL_GetError());
+        printf("Renderer could not be initialized. SDL_ERROR: %s.\n", SDL_GetError());
         return false;
     }
     SDL_SetRenderDrawColor(renderer, 255, 255, 255, 255);
@@ -72,9 +75,28 @@ bool Game::init(const std::string title, const Vec2<int> position, const Vec2<in
     InputHandler::init();
     printf("Input handler initialized.\n");
 
+    // Initialize PNG loading
+    int imgFlags = IMG_INIT_PNG;
+    if (!(IMG_Init(imgFlags) & imgFlags))
+    {
+        printf("SDL_image could not be initialized. SDL_image Error: %s.\n", IMG_GetError());
+        return false;
+    }
+
+    // Initialize SDL_ttf
+    if (TTF_Init() == -1)
+    {
+        printf("SDL_ttf could not be initialized. SDL_ttf Error: %s.\n", TTF_GetError());
+        return false;
+    }
+
     ball.setOutOfBoundsCallback([this]() {this->newRound();});
+
     run_status = true;
     printf("Game initialized.\n");
+
+    TextureManager::loadFontStyle("assets/fonts/Vogue.ttf", "Vogue", 16, (SDL_Colour) {255, 255, 255});
+    TextureManager::loadTextTexture("ur mom", 200);
     
     return true;
 }
@@ -149,6 +171,7 @@ void Game::render(const float interpolation)
     player.render(interpolation);
     opponent.render(interpolation);
     ball.render(interpolation);
+    TextureManager::renderText("ur mom", (SDL_Rect) {0, 0, 100, 100});
 
     SDL_RenderPresent(renderer);
 }
@@ -157,6 +180,10 @@ void Game::quit()
 {
     SDL_DestroyWindow(window);
     SDL_DestroyRenderer(renderer);
+
+    TTF_Quit();
+    TextureManager::quit();
+    IMG_Quit();
     SDL_Quit();
 
     printf("Game quit.\n");

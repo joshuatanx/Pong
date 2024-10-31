@@ -1,5 +1,7 @@
 Todo:
 	☐ Add text rendering support @started(24-10-31 18:11)
+	☐ Add glyph-based font rendering
+	☐ Rework texture manager
 	☐ Add score display
 	☐ Add court dividing line
   	✔ Add callback for when point is scored @done(24-10-31 11:40)

@@ -23,6 +23,8 @@ link_directories(/opt/homebrew/Cellar/sdl2_ttf/2.22.0/lib)
 include_directories(/opt/homebrew/Cellar/sdl2_image/2.8.2_2/include/SDL2)
 link_directories(/opt/homebrew/Cellar/sdl2_image/2.8.2_2/lib)
 
+include_directories(/opt/homebrew/include)
+
 # Find all source files
 file(GLOB SOURCES "src/*.cpp")
 
@@ -30,4 +32,9 @@ file(GLOB SOURCES "src/*.cpp")
 add_executable(Pong++ ${SOURCES})
 
 # Link SDL2
-target_link_libraries(Pong++ SDL2)
+target_link_libraries(Pong++ SDL2 SDL2_Image SDL2_ttf)
+
+# Add a custom command to copy the assets folder to the build directory
+add_custom_command(TARGET Pong++ POST_BUILD
+    COMMAND ${CMAKE_COMMAND} -E copy_directory
+    ${CMAKE_SOURCE_DIR}/assets $<TARGET_FILE_DIR:Pong++>/assets)
