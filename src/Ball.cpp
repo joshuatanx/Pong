@@ -57,7 +57,6 @@ void Ball::setVelocity(const Vec2<int> velocity)
 void Ball::setOutOfBoundsCallback(std::function<void()> callback)
 {
     outOfBoundsCallback = callback;
-    std::cout << "Set out of bounds callback";
 }
 
 

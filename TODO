@@ -1,4 +1,7 @@
 Todo:
-  	☐ Add callback for when point is scored
+	☐ Add text rendering support @started(24-10-31 18:11)
+	☐ Add score display
+	☐ Add court dividing line
+  	✔ Add callback for when point is scored @done(24-10-31 11:40)
 
 Archive:

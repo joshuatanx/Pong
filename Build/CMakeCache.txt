@@ -206,6 +206,15 @@ Pong++_IS_TOP_LEVEL:STATIC=ON
 //Value Computed by CMake
 Pong++_SOURCE_DIR:STATIC=/Users/joshuatan/Documents/Programming/C++/Pong
 
+//The directory containing a CMake configuration file for SDL2.
+SDL2_DIR:PATH=/opt/homebrew/lib/cmake/SDL2
+
+//The directory containing a CMake configuration file for SDL2_image.
+SDL2_image_DIR:PATH=/opt/homebrew/lib/cmake/SDL2_image
+
+//The directory containing a CMake configuration file for SDL2_ttf.
+SDL2_ttf_DIR:PATH=/opt/homebrew/lib/cmake/SDL2_ttf
+
 
 ########################
 # INTERNAL cache entries
@@ -259,8 +268,6 @@ CMAKE_EXE_LINKER_FLAGS_MINSIZEREL-ADVANCED:INTERNAL=1
 CMAKE_EXE_LINKER_FLAGS_RELEASE-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_EXE_LINKER_FLAGS_RELWITHDEBINFO
 CMAKE_EXE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: CMAKE_EXPORT_COMPILE_COMMANDS
-CMAKE_EXPORT_COMPILE_COMMANDS-ADVANCED:INTERNAL=1
 //Name of external makefile project generator.
 CMAKE_EXTRA_GENERATOR:INTERNAL=
 //Name of generator.

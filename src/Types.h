@@ -60,6 +60,9 @@ enum PaddleType
     CPU2
 };
 
+// Graphics
+using TextureID = std::size_t;
+
 // Screen info
 const int SCREEN_WIDTH = 600;
 const int SCREEN_HEIGHT = 600;

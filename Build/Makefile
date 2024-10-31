@@ -129,149 +129,173 @@ Pong++/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Pong++.dir/build.make CMakeFiles/Pong++.dir/build
 .PHONY : Pong++/fast
 
-Source/Ball.o: Source/Ball.cpp.o
-.PHONY : Source/Ball.o
+src/Ball.o: src/Ball.cpp.o
+.PHONY : src/Ball.o
 
 # target to build an object file
-Source/Ball.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Pong++.dir/build.make CMakeFiles/Pong++.dir/Source/Ball.cpp.o
-.PHONY : Source/Ball.cpp.o
+src/Ball.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Pong++.dir/build.make CMakeFiles/Pong++.dir/src/Ball.cpp.o
+.PHONY : src/Ball.cpp.o
 
-Source/Ball.i: Source/Ball.cpp.i
-.PHONY : Source/Ball.i
+src/Ball.i: src/Ball.cpp.i
+.PHONY : src/Ball.i
 
 # target to preprocess a source file
-Source/Ball.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Pong++.dir/build.make CMakeFiles/Pong++.dir/Source/Ball.cpp.i
-.PHONY : Source/Ball.cpp.i
+src/Ball.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Pong++.dir/build.make CMakeFiles/Pong++.dir/src/Ball.cpp.i
+.PHONY : src/Ball.cpp.i
 
-Source/Ball.s: Source/Ball.cpp.s
-.PHONY : Source/Ball.s
+src/Ball.s: src/Ball.cpp.s
+.PHONY : src/Ball.s
 
 # target to generate assembly for a file
-Source/Ball.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Pong++.dir/build.make CMakeFiles/Pong++.dir/Source/Ball.cpp.s
-.PHONY : Source/Ball.cpp.s
+src/Ball.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Pong++.dir/build.make CMakeFiles/Pong++.dir/src/Ball.cpp.s
+.PHONY : src/Ball.cpp.s
 
-Source/Game.o: Source/Game.cpp.o
-.PHONY : Source/Game.o
+src/Game.o: src/Game.cpp.o
+.PHONY : src/Game.o
 
 # target to build an object file
-Source/Game.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Pong++.dir/build.make CMakeFiles/Pong++.dir/Source/Game.cpp.o
-.PHONY : Source/Game.cpp.o
+src/Game.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Pong++.dir/build.make CMakeFiles/Pong++.dir/src/Game.cpp.o
+.PHONY : src/Game.cpp.o
 
-Source/Game.i: Source/Game.cpp.i
-.PHONY : Source/Game.i
+src/Game.i: src/Game.cpp.i
+.PHONY : src/Game.i
 
 # target to preprocess a source file
-Source/Game.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Pong++.dir/build.make CMakeFiles/Pong++.dir/Source/Game.cpp.i
-.PHONY : Source/Game.cpp.i
+src/Game.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Pong++.dir/build.make CMakeFiles/Pong++.dir/src/Game.cpp.i
+.PHONY : src/Game.cpp.i
 
-Source/Game.s: Source/Game.cpp.s
-.PHONY : Source/Game.s
+src/Game.s: src/Game.cpp.s
+.PHONY : src/Game.s
 
 # target to generate assembly for a file
-Source/Game.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Pong++.dir/build.make CMakeFiles/Pong++.dir/Source/Game.cpp.s
-.PHONY : Source/Game.cpp.s
+src/Game.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Pong++.dir/build.make CMakeFiles/Pong++.dir/src/Game.cpp.s
+.PHONY : src/Game.cpp.s
 
-Source/InputHandler.o: Source/InputHandler.cpp.o
-.PHONY : Source/InputHandler.o
+src/InputHandler.o: src/InputHandler.cpp.o
+.PHONY : src/InputHandler.o
 
 # target to build an object file
-Source/InputHandler.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Pong++.dir/build.make CMakeFiles/Pong++.dir/Source/InputHandler.cpp.o
-.PHONY : Source/InputHandler.cpp.o
+src/InputHandler.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Pong++.dir/build.make CMakeFiles/Pong++.dir/src/InputHandler.cpp.o
+.PHONY : src/InputHandler.cpp.o
 
-Source/InputHandler.i: Source/InputHandler.cpp.i
-.PHONY : Source/InputHandler.i
+src/InputHandler.i: src/InputHandler.cpp.i
+.PHONY : src/InputHandler.i
 
 # target to preprocess a source file
-Source/InputHandler.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Pong++.dir/build.make CMakeFiles/Pong++.dir/Source/InputHandler.cpp.i
-.PHONY : Source/InputHandler.cpp.i
+src/InputHandler.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Pong++.dir/build.make CMakeFiles/Pong++.dir/src/InputHandler.cpp.i
+.PHONY : src/InputHandler.cpp.i
 
-Source/InputHandler.s: Source/InputHandler.cpp.s
-.PHONY : Source/InputHandler.s
+src/InputHandler.s: src/InputHandler.cpp.s
+.PHONY : src/InputHandler.s
 
 # target to generate assembly for a file
-Source/InputHandler.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Pong++.dir/build.make CMakeFiles/Pong++.dir/Source/InputHandler.cpp.s
-.PHONY : Source/InputHandler.cpp.s
+src/InputHandler.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Pong++.dir/build.make CMakeFiles/Pong++.dir/src/InputHandler.cpp.s
+.PHONY : src/InputHandler.cpp.s
 
-Source/Interface.o: Source/Interface.cpp.o
-.PHONY : Source/Interface.o
+src/Interface.o: src/Interface.cpp.o
+.PHONY : src/Interface.o
 
 # target to build an object file
-Source/Interface.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Pong++.dir/build.make CMakeFiles/Pong++.dir/Source/Interface.cpp.o
-.PHONY : Source/Interface.cpp.o
+src/Interface.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Pong++.dir/build.make CMakeFiles/Pong++.dir/src/Interface.cpp.o
+.PHONY : src/Interface.cpp.o
 
-Source/Interface.i: Source/Interface.cpp.i
-.PHONY : Source/Interface.i
+src/Interface.i: src/Interface.cpp.i
+.PHONY : src/Interface.i
 
 # target to preprocess a source file
-Source/Interface.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Pong++.dir/build.make CMakeFiles/Pong++.dir/Source/Interface.cpp.i
-.PHONY : Source/Interface.cpp.i
+src/Interface.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Pong++.dir/build.make CMakeFiles/Pong++.dir/src/Interface.cpp.i
+.PHONY : src/Interface.cpp.i
 
-Source/Interface.s: Source/Interface.cpp.s
-.PHONY : Source/Interface.s
+src/Interface.s: src/Interface.cpp.s
+.PHONY : src/Interface.s
 
 # target to generate assembly for a file
-Source/Interface.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Pong++.dir/build.make CMakeFiles/Pong++.dir/Source/Interface.cpp.s
-.PHONY : Source/Interface.cpp.s
+src/Interface.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Pong++.dir/build.make CMakeFiles/Pong++.dir/src/Interface.cpp.s
+.PHONY : src/Interface.cpp.s
 
-Source/Paddle.o: Source/Paddle.cpp.o
-.PHONY : Source/Paddle.o
+src/Paddle.o: src/Paddle.cpp.o
+.PHONY : src/Paddle.o
 
 # target to build an object file
-Source/Paddle.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Pong++.dir/build.make CMakeFiles/Pong++.dir/Source/Paddle.cpp.o
-.PHONY : Source/Paddle.cpp.o
+src/Paddle.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Pong++.dir/build.make CMakeFiles/Pong++.dir/src/Paddle.cpp.o
+.PHONY : src/Paddle.cpp.o
 
-Source/Paddle.i: Source/Paddle.cpp.i
-.PHONY : Source/Paddle.i
+src/Paddle.i: src/Paddle.cpp.i
+.PHONY : src/Paddle.i
 
 # target to preprocess a source file
-Source/Paddle.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Pong++.dir/build.make CMakeFiles/Pong++.dir/Source/Paddle.cpp.i
-.PHONY : Source/Paddle.cpp.i
+src/Paddle.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Pong++.dir/build.make CMakeFiles/Pong++.dir/src/Paddle.cpp.i
+.PHONY : src/Paddle.cpp.i
 
-Source/Paddle.s: Source/Paddle.cpp.s
-.PHONY : Source/Paddle.s
+src/Paddle.s: src/Paddle.cpp.s
+.PHONY : src/Paddle.s
 
 # target to generate assembly for a file
-Source/Paddle.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Pong++.dir/build.make CMakeFiles/Pong++.dir/Source/Paddle.cpp.s
-.PHONY : Source/Paddle.cpp.s
+src/Paddle.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Pong++.dir/build.make CMakeFiles/Pong++.dir/src/Paddle.cpp.s
+.PHONY : src/Paddle.cpp.s
 
-Source/main.o: Source/main.cpp.o
-.PHONY : Source/main.o
+src/TextureManager.o: src/TextureManager.cpp.o
+.PHONY : src/TextureManager.o
 
 # target to build an object file
-Source/main.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Pong++.dir/build.make CMakeFiles/Pong++.dir/Source/main.cpp.o
-.PHONY : Source/main.cpp.o
+src/TextureManager.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Pong++.dir/build.make CMakeFiles/Pong++.dir/src/TextureManager.cpp.o
+.PHONY : src/TextureManager.cpp.o
 
-Source/main.i: Source/main.cpp.i
-.PHONY : Source/main.i
+src/TextureManager.i: src/TextureManager.cpp.i
+.PHONY : src/TextureManager.i
 
 # target to preprocess a source file
-Source/main.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Pong++.dir/build.make CMakeFiles/Pong++.dir/Source/main.cpp.i
-.PHONY : Source/main.cpp.i
+src/TextureManager.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Pong++.dir/build.make CMakeFiles/Pong++.dir/src/TextureManager.cpp.i
+.PHONY : src/TextureManager.cpp.i
 
-Source/main.s: Source/main.cpp.s
-.PHONY : Source/main.s
+src/TextureManager.s: src/TextureManager.cpp.s
+.PHONY : src/TextureManager.s
 
 # target to generate assembly for a file
-Source/main.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Pong++.dir/build.make CMakeFiles/Pong++.dir/Source/main.cpp.s
-.PHONY : Source/main.cpp.s
+src/TextureManager.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Pong++.dir/build.make CMakeFiles/Pong++.dir/src/TextureManager.cpp.s
+.PHONY : src/TextureManager.cpp.s
+
+src/main.o: src/main.cpp.o
+.PHONY : src/main.o
+
+# target to build an object file
+src/main.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Pong++.dir/build.make CMakeFiles/Pong++.dir/src/main.cpp.o
+.PHONY : src/main.cpp.o
+
+src/main.i: src/main.cpp.i
+.PHONY : src/main.i
+
+# target to preprocess a source file
+src/main.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Pong++.dir/build.make CMakeFiles/Pong++.dir/src/main.cpp.i
+.PHONY : src/main.cpp.i
+
+src/main.s: src/main.cpp.s
+.PHONY : src/main.s
+
+# target to generate assembly for a file
+src/main.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Pong++.dir/build.make CMakeFiles/Pong++.dir/src/main.cpp.s
+.PHONY : src/main.cpp.s
 
 # Help Target
 help:
@@ -282,24 +306,27 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... Pong++"
-	@echo "... Source/Ball.o"
-	@echo "... Source/Ball.i"
-	@echo "... Source/Ball.s"
-	@echo "... Source/Game.o"
-	@echo "... Source/Game.i"
-	@echo "... Source/Game.s"
-	@echo "... Source/InputHandler.o"
-	@echo "... Source/InputHandler.i"
-	@echo "... Source/InputHandler.s"
-	@echo "... Source/Interface.o"
-	@echo "... Source/Interface.i"
-	@echo "... Source/Interface.s"
-	@echo "... Source/Paddle.o"
-	@echo "... Source/Paddle.i"
-	@echo "... Source/Paddle.s"
-	@echo "... Source/main.o"
-	@echo "... Source/main.i"
-	@echo "... Source/main.s"
+	@echo "... src/Ball.o"
+	@echo "... src/Ball.i"
+	@echo "... src/Ball.s"
+	@echo "... src/Game.o"
+	@echo "... src/Game.i"
+	@echo "... src/Game.s"
+	@echo "... src/InputHandler.o"
+	@echo "... src/InputHandler.i"
+	@echo "... src/InputHandler.s"
+	@echo "... src/Interface.o"
+	@echo "... src/Interface.i"
+	@echo "... src/Interface.s"
+	@echo "... src/Paddle.o"
+	@echo "... src/Paddle.i"
+	@echo "... src/Paddle.s"
+	@echo "... src/TextureManager.o"
+	@echo "... src/TextureManager.i"
+	@echo "... src/TextureManager.s"
+	@echo "... src/main.o"
+	@echo "... src/main.i"
+	@echo "... src/main.s"
 .PHONY : help
 
 

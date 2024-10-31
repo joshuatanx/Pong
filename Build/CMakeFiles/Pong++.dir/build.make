@@ -69,111 +69,127 @@ include CMakeFiles/Pong++.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/Pong++.dir/flags.make
 
-CMakeFiles/Pong++.dir/Source/Ball.cpp.o: CMakeFiles/Pong++.dir/flags.make
-CMakeFiles/Pong++.dir/Source/Ball.cpp.o: /Users/joshuatan/Documents/Programming/C++/Pong/Source/Ball.cpp
-CMakeFiles/Pong++.dir/Source/Ball.cpp.o: CMakeFiles/Pong++.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/joshuatan/Documents/Programming/C++/Pong/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/Pong++.dir/Source/Ball.cpp.o"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Pong++.dir/Source/Ball.cpp.o -MF CMakeFiles/Pong++.dir/Source/Ball.cpp.o.d -o CMakeFiles/Pong++.dir/Source/Ball.cpp.o -c /Users/joshuatan/Documents/Programming/C++/Pong/Source/Ball.cpp
+CMakeFiles/Pong++.dir/src/Ball.cpp.o: CMakeFiles/Pong++.dir/flags.make
+CMakeFiles/Pong++.dir/src/Ball.cpp.o: /Users/joshuatan/Documents/Programming/C++/Pong/src/Ball.cpp
+CMakeFiles/Pong++.dir/src/Ball.cpp.o: CMakeFiles/Pong++.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/joshuatan/Documents/Programming/C++/Pong/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/Pong++.dir/src/Ball.cpp.o"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Pong++.dir/src/Ball.cpp.o -MF CMakeFiles/Pong++.dir/src/Ball.cpp.o.d -o CMakeFiles/Pong++.dir/src/Ball.cpp.o -c /Users/joshuatan/Documents/Programming/C++/Pong/src/Ball.cpp
 
-CMakeFiles/Pong++.dir/Source/Ball.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/Pong++.dir/Source/Ball.cpp.i"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/joshuatan/Documents/Programming/C++/Pong/Source/Ball.cpp > CMakeFiles/Pong++.dir/Source/Ball.cpp.i
+CMakeFiles/Pong++.dir/src/Ball.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/Pong++.dir/src/Ball.cpp.i"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/joshuatan/Documents/Programming/C++/Pong/src/Ball.cpp > CMakeFiles/Pong++.dir/src/Ball.cpp.i
 
-CMakeFiles/Pong++.dir/Source/Ball.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/Pong++.dir/Source/Ball.cpp.s"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/joshuatan/Documents/Programming/C++/Pong/Source/Ball.cpp -o CMakeFiles/Pong++.dir/Source/Ball.cpp.s
+CMakeFiles/Pong++.dir/src/Ball.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/Pong++.dir/src/Ball.cpp.s"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/joshuatan/Documents/Programming/C++/Pong/src/Ball.cpp -o CMakeFiles/Pong++.dir/src/Ball.cpp.s
 
-CMakeFiles/Pong++.dir/Source/Game.cpp.o: CMakeFiles/Pong++.dir/flags.make
-CMakeFiles/Pong++.dir/Source/Game.cpp.o: /Users/joshuatan/Documents/Programming/C++/Pong/Source/Game.cpp
-CMakeFiles/Pong++.dir/Source/Game.cpp.o: CMakeFiles/Pong++.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/joshuatan/Documents/Programming/C++/Pong/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/Pong++.dir/Source/Game.cpp.o"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Pong++.dir/Source/Game.cpp.o -MF CMakeFiles/Pong++.dir/Source/Game.cpp.o.d -o CMakeFiles/Pong++.dir/Source/Game.cpp.o -c /Users/joshuatan/Documents/Programming/C++/Pong/Source/Game.cpp
+CMakeFiles/Pong++.dir/src/Game.cpp.o: CMakeFiles/Pong++.dir/flags.make
+CMakeFiles/Pong++.dir/src/Game.cpp.o: /Users/joshuatan/Documents/Programming/C++/Pong/src/Game.cpp
+CMakeFiles/Pong++.dir/src/Game.cpp.o: CMakeFiles/Pong++.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/joshuatan/Documents/Programming/C++/Pong/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/Pong++.dir/src/Game.cpp.o"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Pong++.dir/src/Game.cpp.o -MF CMakeFiles/Pong++.dir/src/Game.cpp.o.d -o CMakeFiles/Pong++.dir/src/Game.cpp.o -c /Users/joshuatan/Documents/Programming/C++/Pong/src/Game.cpp
 
-CMakeFiles/Pong++.dir/Source/Game.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/Pong++.dir/Source/Game.cpp.i"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/joshuatan/Documents/Programming/C++/Pong/Source/Game.cpp > CMakeFiles/Pong++.dir/Source/Game.cpp.i
+CMakeFiles/Pong++.dir/src/Game.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/Pong++.dir/src/Game.cpp.i"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/joshuatan/Documents/Programming/C++/Pong/src/Game.cpp > CMakeFiles/Pong++.dir/src/Game.cpp.i
 
-CMakeFiles/Pong++.dir/Source/Game.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/Pong++.dir/Source/Game.cpp.s"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/joshuatan/Documents/Programming/C++/Pong/Source/Game.cpp -o CMakeFiles/Pong++.dir/Source/Game.cpp.s
+CMakeFiles/Pong++.dir/src/Game.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/Pong++.dir/src/Game.cpp.s"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/joshuatan/Documents/Programming/C++/Pong/src/Game.cpp -o CMakeFiles/Pong++.dir/src/Game.cpp.s
 
-CMakeFiles/Pong++.dir/Source/InputHandler.cpp.o: CMakeFiles/Pong++.dir/flags.make
-CMakeFiles/Pong++.dir/Source/InputHandler.cpp.o: /Users/joshuatan/Documents/Programming/C++/Pong/Source/InputHandler.cpp
-CMakeFiles/Pong++.dir/Source/InputHandler.cpp.o: CMakeFiles/Pong++.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/joshuatan/Documents/Programming/C++/Pong/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/Pong++.dir/Source/InputHandler.cpp.o"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Pong++.dir/Source/InputHandler.cpp.o -MF CMakeFiles/Pong++.dir/Source/InputHandler.cpp.o.d -o CMakeFiles/Pong++.dir/Source/InputHandler.cpp.o -c /Users/joshuatan/Documents/Programming/C++/Pong/Source/InputHandler.cpp
+CMakeFiles/Pong++.dir/src/InputHandler.cpp.o: CMakeFiles/Pong++.dir/flags.make
+CMakeFiles/Pong++.dir/src/InputHandler.cpp.o: /Users/joshuatan/Documents/Programming/C++/Pong/src/InputHandler.cpp
+CMakeFiles/Pong++.dir/src/InputHandler.cpp.o: CMakeFiles/Pong++.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/joshuatan/Documents/Programming/C++/Pong/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/Pong++.dir/src/InputHandler.cpp.o"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Pong++.dir/src/InputHandler.cpp.o -MF CMakeFiles/Pong++.dir/src/InputHandler.cpp.o.d -o CMakeFiles/Pong++.dir/src/InputHandler.cpp.o -c /Users/joshuatan/Documents/Programming/C++/Pong/src/InputHandler.cpp
 
-CMakeFiles/Pong++.dir/Source/InputHandler.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/Pong++.dir/Source/InputHandler.cpp.i"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/joshuatan/Documents/Programming/C++/Pong/Source/InputHandler.cpp > CMakeFiles/Pong++.dir/Source/InputHandler.cpp.i
+CMakeFiles/Pong++.dir/src/InputHandler.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/Pong++.dir/src/InputHandler.cpp.i"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/joshuatan/Documents/Programming/C++/Pong/src/InputHandler.cpp > CMakeFiles/Pong++.dir/src/InputHandler.cpp.i
 
-CMakeFiles/Pong++.dir/Source/InputHandler.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/Pong++.dir/Source/InputHandler.cpp.s"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/joshuatan/Documents/Programming/C++/Pong/Source/InputHandler.cpp -o CMakeFiles/Pong++.dir/Source/InputHandler.cpp.s
+CMakeFiles/Pong++.dir/src/InputHandler.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/Pong++.dir/src/InputHandler.cpp.s"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/joshuatan/Documents/Programming/C++/Pong/src/InputHandler.cpp -o CMakeFiles/Pong++.dir/src/InputHandler.cpp.s
 
-CMakeFiles/Pong++.dir/Source/Interface.cpp.o: CMakeFiles/Pong++.dir/flags.make
-CMakeFiles/Pong++.dir/Source/Interface.cpp.o: /Users/joshuatan/Documents/Programming/C++/Pong/Source/Interface.cpp
-CMakeFiles/Pong++.dir/Source/Interface.cpp.o: CMakeFiles/Pong++.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/joshuatan/Documents/Programming/C++/Pong/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/Pong++.dir/Source/Interface.cpp.o"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Pong++.dir/Source/Interface.cpp.o -MF CMakeFiles/Pong++.dir/Source/Interface.cpp.o.d -o CMakeFiles/Pong++.dir/Source/Interface.cpp.o -c /Users/joshuatan/Documents/Programming/C++/Pong/Source/Interface.cpp
+CMakeFiles/Pong++.dir/src/Interface.cpp.o: CMakeFiles/Pong++.dir/flags.make
+CMakeFiles/Pong++.dir/src/Interface.cpp.o: /Users/joshuatan/Documents/Programming/C++/Pong/src/Interface.cpp
+CMakeFiles/Pong++.dir/src/Interface.cpp.o: CMakeFiles/Pong++.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/joshuatan/Documents/Programming/C++/Pong/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/Pong++.dir/src/Interface.cpp.o"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Pong++.dir/src/Interface.cpp.o -MF CMakeFiles/Pong++.dir/src/Interface.cpp.o.d -o CMakeFiles/Pong++.dir/src/Interface.cpp.o -c /Users/joshuatan/Documents/Programming/C++/Pong/src/Interface.cpp
 
-CMakeFiles/Pong++.dir/Source/Interface.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/Pong++.dir/Source/Interface.cpp.i"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/joshuatan/Documents/Programming/C++/Pong/Source/Interface.cpp > CMakeFiles/Pong++.dir/Source/Interface.cpp.i
+CMakeFiles/Pong++.dir/src/Interface.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/Pong++.dir/src/Interface.cpp.i"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/joshuatan/Documents/Programming/C++/Pong/src/Interface.cpp > CMakeFiles/Pong++.dir/src/Interface.cpp.i
 
-CMakeFiles/Pong++.dir/Source/Interface.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/Pong++.dir/Source/Interface.cpp.s"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/joshuatan/Documents/Programming/C++/Pong/Source/Interface.cpp -o CMakeFiles/Pong++.dir/Source/Interface.cpp.s
+CMakeFiles/Pong++.dir/src/Interface.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/Pong++.dir/src/Interface.cpp.s"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/joshuatan/Documents/Programming/C++/Pong/src/Interface.cpp -o CMakeFiles/Pong++.dir/src/Interface.cpp.s
 
-CMakeFiles/Pong++.dir/Source/Paddle.cpp.o: CMakeFiles/Pong++.dir/flags.make
-CMakeFiles/Pong++.dir/Source/Paddle.cpp.o: /Users/joshuatan/Documents/Programming/C++/Pong/Source/Paddle.cpp
-CMakeFiles/Pong++.dir/Source/Paddle.cpp.o: CMakeFiles/Pong++.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/joshuatan/Documents/Programming/C++/Pong/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/Pong++.dir/Source/Paddle.cpp.o"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Pong++.dir/Source/Paddle.cpp.o -MF CMakeFiles/Pong++.dir/Source/Paddle.cpp.o.d -o CMakeFiles/Pong++.dir/Source/Paddle.cpp.o -c /Users/joshuatan/Documents/Programming/C++/Pong/Source/Paddle.cpp
+CMakeFiles/Pong++.dir/src/Paddle.cpp.o: CMakeFiles/Pong++.dir/flags.make
+CMakeFiles/Pong++.dir/src/Paddle.cpp.o: /Users/joshuatan/Documents/Programming/C++/Pong/src/Paddle.cpp
+CMakeFiles/Pong++.dir/src/Paddle.cpp.o: CMakeFiles/Pong++.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/joshuatan/Documents/Programming/C++/Pong/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/Pong++.dir/src/Paddle.cpp.o"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Pong++.dir/src/Paddle.cpp.o -MF CMakeFiles/Pong++.dir/src/Paddle.cpp.o.d -o CMakeFiles/Pong++.dir/src/Paddle.cpp.o -c /Users/joshuatan/Documents/Programming/C++/Pong/src/Paddle.cpp
 
-CMakeFiles/Pong++.dir/Source/Paddle.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/Pong++.dir/Source/Paddle.cpp.i"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/joshuatan/Documents/Programming/C++/Pong/Source/Paddle.cpp > CMakeFiles/Pong++.dir/Source/Paddle.cpp.i
+CMakeFiles/Pong++.dir/src/Paddle.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/Pong++.dir/src/Paddle.cpp.i"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/joshuatan/Documents/Programming/C++/Pong/src/Paddle.cpp > CMakeFiles/Pong++.dir/src/Paddle.cpp.i
 
-CMakeFiles/Pong++.dir/Source/Paddle.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/Pong++.dir/Source/Paddle.cpp.s"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/joshuatan/Documents/Programming/C++/Pong/Source/Paddle.cpp -o CMakeFiles/Pong++.dir/Source/Paddle.cpp.s
+CMakeFiles/Pong++.dir/src/Paddle.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/Pong++.dir/src/Paddle.cpp.s"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/joshuatan/Documents/Programming/C++/Pong/src/Paddle.cpp -o CMakeFiles/Pong++.dir/src/Paddle.cpp.s
 
-CMakeFiles/Pong++.dir/Source/main.cpp.o: CMakeFiles/Pong++.dir/flags.make
-CMakeFiles/Pong++.dir/Source/main.cpp.o: /Users/joshuatan/Documents/Programming/C++/Pong/Source/main.cpp
-CMakeFiles/Pong++.dir/Source/main.cpp.o: CMakeFiles/Pong++.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/joshuatan/Documents/Programming/C++/Pong/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/Pong++.dir/Source/main.cpp.o"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Pong++.dir/Source/main.cpp.o -MF CMakeFiles/Pong++.dir/Source/main.cpp.o.d -o CMakeFiles/Pong++.dir/Source/main.cpp.o -c /Users/joshuatan/Documents/Programming/C++/Pong/Source/main.cpp
+CMakeFiles/Pong++.dir/src/TextureManager.cpp.o: CMakeFiles/Pong++.dir/flags.make
+CMakeFiles/Pong++.dir/src/TextureManager.cpp.o: /Users/joshuatan/Documents/Programming/C++/Pong/src/TextureManager.cpp
+CMakeFiles/Pong++.dir/src/TextureManager.cpp.o: CMakeFiles/Pong++.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/joshuatan/Documents/Programming/C++/Pong/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/Pong++.dir/src/TextureManager.cpp.o"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Pong++.dir/src/TextureManager.cpp.o -MF CMakeFiles/Pong++.dir/src/TextureManager.cpp.o.d -o CMakeFiles/Pong++.dir/src/TextureManager.cpp.o -c /Users/joshuatan/Documents/Programming/C++/Pong/src/TextureManager.cpp
 
-CMakeFiles/Pong++.dir/Source/main.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/Pong++.dir/Source/main.cpp.i"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/joshuatan/Documents/Programming/C++/Pong/Source/main.cpp > CMakeFiles/Pong++.dir/Source/main.cpp.i
+CMakeFiles/Pong++.dir/src/TextureManager.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/Pong++.dir/src/TextureManager.cpp.i"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/joshuatan/Documents/Programming/C++/Pong/src/TextureManager.cpp > CMakeFiles/Pong++.dir/src/TextureManager.cpp.i
 
-CMakeFiles/Pong++.dir/Source/main.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/Pong++.dir/Source/main.cpp.s"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/joshuatan/Documents/Programming/C++/Pong/Source/main.cpp -o CMakeFiles/Pong++.dir/Source/main.cpp.s
+CMakeFiles/Pong++.dir/src/TextureManager.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/Pong++.dir/src/TextureManager.cpp.s"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/joshuatan/Documents/Programming/C++/Pong/src/TextureManager.cpp -o CMakeFiles/Pong++.dir/src/TextureManager.cpp.s
+
+CMakeFiles/Pong++.dir/src/main.cpp.o: CMakeFiles/Pong++.dir/flags.make
+CMakeFiles/Pong++.dir/src/main.cpp.o: /Users/joshuatan/Documents/Programming/C++/Pong/src/main.cpp
+CMakeFiles/Pong++.dir/src/main.cpp.o: CMakeFiles/Pong++.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/joshuatan/Documents/Programming/C++/Pong/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/Pong++.dir/src/main.cpp.o"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Pong++.dir/src/main.cpp.o -MF CMakeFiles/Pong++.dir/src/main.cpp.o.d -o CMakeFiles/Pong++.dir/src/main.cpp.o -c /Users/joshuatan/Documents/Programming/C++/Pong/src/main.cpp
+
+CMakeFiles/Pong++.dir/src/main.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/Pong++.dir/src/main.cpp.i"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/joshuatan/Documents/Programming/C++/Pong/src/main.cpp > CMakeFiles/Pong++.dir/src/main.cpp.i
+
+CMakeFiles/Pong++.dir/src/main.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/Pong++.dir/src/main.cpp.s"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/joshuatan/Documents/Programming/C++/Pong/src/main.cpp -o CMakeFiles/Pong++.dir/src/main.cpp.s
 
 # Object files for target Pong++
 Pong_______OBJECTS = \
-"CMakeFiles/Pong++.dir/Source/Ball.cpp.o" \
-"CMakeFiles/Pong++.dir/Source/Game.cpp.o" \
-"CMakeFiles/Pong++.dir/Source/InputHandler.cpp.o" \
-"CMakeFiles/Pong++.dir/Source/Interface.cpp.o" \
-"CMakeFiles/Pong++.dir/Source/Paddle.cpp.o" \
-"CMakeFiles/Pong++.dir/Source/main.cpp.o"
+"CMakeFiles/Pong++.dir/src/Ball.cpp.o" \
+"CMakeFiles/Pong++.dir/src/Game.cpp.o" \
+"CMakeFiles/Pong++.dir/src/InputHandler.cpp.o" \
+"CMakeFiles/Pong++.dir/src/Interface.cpp.o" \
+"CMakeFiles/Pong++.dir/src/Paddle.cpp.o" \
+"CMakeFiles/Pong++.dir/src/TextureManager.cpp.o" \
+"CMakeFiles/Pong++.dir/src/main.cpp.o"
 
 # External object files for target Pong++
 Pong_______EXTERNAL_OBJECTS =
 
-Pong++: CMakeFiles/Pong++.dir/Source/Ball.cpp.o
-Pong++: CMakeFiles/Pong++.dir/Source/Game.cpp.o
-Pong++: CMakeFiles/Pong++.dir/Source/InputHandler.cpp.o
-Pong++: CMakeFiles/Pong++.dir/Source/Interface.cpp.o
-Pong++: CMakeFiles/Pong++.dir/Source/Paddle.cpp.o
-Pong++: CMakeFiles/Pong++.dir/Source/main.cpp.o
+Pong++: CMakeFiles/Pong++.dir/src/Ball.cpp.o
+Pong++: CMakeFiles/Pong++.dir/src/Game.cpp.o
+Pong++: CMakeFiles/Pong++.dir/src/InputHandler.cpp.o
+Pong++: CMakeFiles/Pong++.dir/src/Interface.cpp.o
+Pong++: CMakeFiles/Pong++.dir/src/Paddle.cpp.o
+Pong++: CMakeFiles/Pong++.dir/src/TextureManager.cpp.o
+Pong++: CMakeFiles/Pong++.dir/src/main.cpp.o
 Pong++: CMakeFiles/Pong++.dir/build.make
 Pong++: CMakeFiles/Pong++.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/Users/joshuatan/Documents/Programming/C++/Pong/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Linking CXX executable Pong++"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/Users/joshuatan/Documents/Programming/C++/Pong/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Linking CXX executable Pong++"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/Pong++.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
