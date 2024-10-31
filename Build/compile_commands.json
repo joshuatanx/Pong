@@ -1,0 +1,38 @@
+[
+{
+  "directory": "/Users/joshuatan/Documents/Programming/C++/Pong/build",
+  "command": "/usr/bin/clang++  -I/opt/homebrew/Cellar/sdl2/2.30.8/include/SDL2 -g -std=gnu++17 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk -mmacosx-version-min=14.1 -o CMakeFiles/Pong++.dir/Source/Ball.cpp.o -c /Users/joshuatan/Documents/Programming/C++/Pong/Source/Ball.cpp",
+  "file": "/Users/joshuatan/Documents/Programming/C++/Pong/Source/Ball.cpp",
+  "output": "CMakeFiles/Pong++.dir/Source/Ball.cpp.o"
+},
+{
+  "directory": "/Users/joshuatan/Documents/Programming/C++/Pong/build",
+  "command": "/usr/bin/clang++  -I/opt/homebrew/Cellar/sdl2/2.30.8/include/SDL2 -g -std=gnu++17 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk -mmacosx-version-min=14.1 -o CMakeFiles/Pong++.dir/Source/Game.cpp.o -c /Users/joshuatan/Documents/Programming/C++/Pong/Source/Game.cpp",
+  "file": "/Users/joshuatan/Documents/Programming/C++/Pong/Source/Game.cpp",
+  "output": "CMakeFiles/Pong++.dir/Source/Game.cpp.o"
+},
+{
+  "directory": "/Users/joshuatan/Documents/Programming/C++/Pong/build",
+  "command": "/usr/bin/clang++  -I/opt/homebrew/Cellar/sdl2/2.30.8/include/SDL2 -g -std=gnu++17 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk -mmacosx-version-min=14.1 -o CMakeFiles/Pong++.dir/Source/InputHandler.cpp.o -c /Users/joshuatan/Documents/Programming/C++/Pong/Source/InputHandler.cpp",
+  "file": "/Users/joshuatan/Documents/Programming/C++/Pong/Source/InputHandler.cpp",
+  "output": "CMakeFiles/Pong++.dir/Source/InputHandler.cpp.o"
+},
+{
+  "directory": "/Users/joshuatan/Documents/Programming/C++/Pong/build",
+  "command": "/usr/bin/clang++  -I/opt/homebrew/Cellar/sdl2/2.30.8/include/SDL2 -g -std=gnu++17 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk -mmacosx-version-min=14.1 -o CMakeFiles/Pong++.dir/Source/Interface.cpp.o -c /Users/joshuatan/Documents/Programming/C++/Pong/Source/Interface.cpp",
+  "file": "/Users/joshuatan/Documents/Programming/C++/Pong/Source/Interface.cpp",
+  "output": "CMakeFiles/Pong++.dir/Source/Interface.cpp.o"
+},
+{
+  "directory": "/Users/joshuatan/Documents/Programming/C++/Pong/build",
+  "command": "/usr/bin/clang++  -I/opt/homebrew/Cellar/sdl2/2.30.8/include/SDL2 -g -std=gnu++17 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk -mmacosx-version-min=14.1 -o CMakeFiles/Pong++.dir/Source/Paddle.cpp.o -c /Users/joshuatan/Documents/Programming/C++/Pong/Source/Paddle.cpp",
+  "file": "/Users/joshuatan/Documents/Programming/C++/Pong/Source/Paddle.cpp",
+  "output": "CMakeFiles/Pong++.dir/Source/Paddle.cpp.o"
+},
+{
+  "directory": "/Users/joshuatan/Documents/Programming/C++/Pong/build",
+  "command": "/usr/bin/clang++  -I/opt/homebrew/Cellar/sdl2/2.30.8/include/SDL2 -g -std=gnu++17 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk -mmacosx-version-min=14.1 -o CMakeFiles/Pong++.dir/Source/main.cpp.o -c /Users/joshuatan/Documents/Programming/C++/Pong/Source/main.cpp",
+  "file": "/Users/joshuatan/Documents/Programming/C++/Pong/Source/main.cpp",
+  "output": "CMakeFiles/Pong++.dir/Source/main.cpp.o"
+}
+]

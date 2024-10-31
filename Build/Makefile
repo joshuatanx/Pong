@@ -57,10 +57,10 @@ RM = /opt/homebrew/Cellar/cmake/3.30.5/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/joshuatan/Documents/Programming/C++/Pong++
+CMAKE_SOURCE_DIR = /Users/joshuatan/Documents/Programming/C++/Pong
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/joshuatan/Documents/Programming/C++/Pong++/build
+CMAKE_BINARY_DIR = /Users/joshuatan/Documents/Programming/C++/Pong/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -87,9 +87,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/joshuatan/Documents/Programming/C++/Pong++/build/CMakeFiles /Users/joshuatan/Documents/Programming/C++/Pong++/build//CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/joshuatan/Documents/Programming/C++/Pong/build/CMakeFiles /Users/joshuatan/Documents/Programming/C++/Pong/build//CMakeFiles/progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/joshuatan/Documents/Programming/C++/Pong++/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/joshuatan/Documents/Programming/C++/Pong/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -117,24 +117,24 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named my_sdl2_project
+# Target rules for targets named Pong++
 
 # Build rule for target.
-my_sdl2_project: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 my_sdl2_project
-.PHONY : my_sdl2_project
+Pong++: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Pong++
+.PHONY : Pong++
 
 # fast build rule for target.
-my_sdl2_project/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_sdl2_project.dir/build.make CMakeFiles/my_sdl2_project.dir/build
-.PHONY : my_sdl2_project/fast
+Pong++/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Pong++.dir/build.make CMakeFiles/Pong++.dir/build
+.PHONY : Pong++/fast
 
 Source/Ball.o: Source/Ball.cpp.o
 .PHONY : Source/Ball.o
 
 # target to build an object file
 Source/Ball.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_sdl2_project.dir/build.make CMakeFiles/my_sdl2_project.dir/Source/Ball.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Pong++.dir/build.make CMakeFiles/Pong++.dir/Source/Ball.cpp.o
 .PHONY : Source/Ball.cpp.o
 
 Source/Ball.i: Source/Ball.cpp.i
@@ -142,7 +142,7 @@ Source/Ball.i: Source/Ball.cpp.i
 
 # target to preprocess a source file
 Source/Ball.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_sdl2_project.dir/build.make CMakeFiles/my_sdl2_project.dir/Source/Ball.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Pong++.dir/build.make CMakeFiles/Pong++.dir/Source/Ball.cpp.i
 .PHONY : Source/Ball.cpp.i
 
 Source/Ball.s: Source/Ball.cpp.s
@@ -150,7 +150,7 @@ Source/Ball.s: Source/Ball.cpp.s
 
 # target to generate assembly for a file
 Source/Ball.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_sdl2_project.dir/build.make CMakeFiles/my_sdl2_project.dir/Source/Ball.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Pong++.dir/build.make CMakeFiles/Pong++.dir/Source/Ball.cpp.s
 .PHONY : Source/Ball.cpp.s
 
 Source/Game.o: Source/Game.cpp.o
@@ -158,7 +158,7 @@ Source/Game.o: Source/Game.cpp.o
 
 # target to build an object file
 Source/Game.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_sdl2_project.dir/build.make CMakeFiles/my_sdl2_project.dir/Source/Game.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Pong++.dir/build.make CMakeFiles/Pong++.dir/Source/Game.cpp.o
 .PHONY : Source/Game.cpp.o
 
 Source/Game.i: Source/Game.cpp.i
@@ -166,7 +166,7 @@ Source/Game.i: Source/Game.cpp.i
 
 # target to preprocess a source file
 Source/Game.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_sdl2_project.dir/build.make CMakeFiles/my_sdl2_project.dir/Source/Game.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Pong++.dir/build.make CMakeFiles/Pong++.dir/Source/Game.cpp.i
 .PHONY : Source/Game.cpp.i
 
 Source/Game.s: Source/Game.cpp.s
@@ -174,7 +174,7 @@ Source/Game.s: Source/Game.cpp.s
 
 # target to generate assembly for a file
 Source/Game.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_sdl2_project.dir/build.make CMakeFiles/my_sdl2_project.dir/Source/Game.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Pong++.dir/build.make CMakeFiles/Pong++.dir/Source/Game.cpp.s
 .PHONY : Source/Game.cpp.s
 
 Source/InputHandler.o: Source/InputHandler.cpp.o
@@ -182,7 +182,7 @@ Source/InputHandler.o: Source/InputHandler.cpp.o
 
 # target to build an object file
 Source/InputHandler.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_sdl2_project.dir/build.make CMakeFiles/my_sdl2_project.dir/Source/InputHandler.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Pong++.dir/build.make CMakeFiles/Pong++.dir/Source/InputHandler.cpp.o
 .PHONY : Source/InputHandler.cpp.o
 
 Source/InputHandler.i: Source/InputHandler.cpp.i
@@ -190,7 +190,7 @@ Source/InputHandler.i: Source/InputHandler.cpp.i
 
 # target to preprocess a source file
 Source/InputHandler.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_sdl2_project.dir/build.make CMakeFiles/my_sdl2_project.dir/Source/InputHandler.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Pong++.dir/build.make CMakeFiles/Pong++.dir/Source/InputHandler.cpp.i
 .PHONY : Source/InputHandler.cpp.i
 
 Source/InputHandler.s: Source/InputHandler.cpp.s
@@ -198,7 +198,7 @@ Source/InputHandler.s: Source/InputHandler.cpp.s
 
 # target to generate assembly for a file
 Source/InputHandler.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_sdl2_project.dir/build.make CMakeFiles/my_sdl2_project.dir/Source/InputHandler.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Pong++.dir/build.make CMakeFiles/Pong++.dir/Source/InputHandler.cpp.s
 .PHONY : Source/InputHandler.cpp.s
 
 Source/Interface.o: Source/Interface.cpp.o
@@ -206,7 +206,7 @@ Source/Interface.o: Source/Interface.cpp.o
 
 # target to build an object file
 Source/Interface.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_sdl2_project.dir/build.make CMakeFiles/my_sdl2_project.dir/Source/Interface.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Pong++.dir/build.make CMakeFiles/Pong++.dir/Source/Interface.cpp.o
 .PHONY : Source/Interface.cpp.o
 
 Source/Interface.i: Source/Interface.cpp.i
@@ -214,7 +214,7 @@ Source/Interface.i: Source/Interface.cpp.i
 
 # target to preprocess a source file
 Source/Interface.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_sdl2_project.dir/build.make CMakeFiles/my_sdl2_project.dir/Source/Interface.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Pong++.dir/build.make CMakeFiles/Pong++.dir/Source/Interface.cpp.i
 .PHONY : Source/Interface.cpp.i
 
 Source/Interface.s: Source/Interface.cpp.s
@@ -222,7 +222,7 @@ Source/Interface.s: Source/Interface.cpp.s
 
 # target to generate assembly for a file
 Source/Interface.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_sdl2_project.dir/build.make CMakeFiles/my_sdl2_project.dir/Source/Interface.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Pong++.dir/build.make CMakeFiles/Pong++.dir/Source/Interface.cpp.s
 .PHONY : Source/Interface.cpp.s
 
 Source/Paddle.o: Source/Paddle.cpp.o
@@ -230,7 +230,7 @@ Source/Paddle.o: Source/Paddle.cpp.o
 
 # target to build an object file
 Source/Paddle.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_sdl2_project.dir/build.make CMakeFiles/my_sdl2_project.dir/Source/Paddle.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Pong++.dir/build.make CMakeFiles/Pong++.dir/Source/Paddle.cpp.o
 .PHONY : Source/Paddle.cpp.o
 
 Source/Paddle.i: Source/Paddle.cpp.i
@@ -238,7 +238,7 @@ Source/Paddle.i: Source/Paddle.cpp.i
 
 # target to preprocess a source file
 Source/Paddle.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_sdl2_project.dir/build.make CMakeFiles/my_sdl2_project.dir/Source/Paddle.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Pong++.dir/build.make CMakeFiles/Pong++.dir/Source/Paddle.cpp.i
 .PHONY : Source/Paddle.cpp.i
 
 Source/Paddle.s: Source/Paddle.cpp.s
@@ -246,7 +246,7 @@ Source/Paddle.s: Source/Paddle.cpp.s
 
 # target to generate assembly for a file
 Source/Paddle.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_sdl2_project.dir/build.make CMakeFiles/my_sdl2_project.dir/Source/Paddle.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Pong++.dir/build.make CMakeFiles/Pong++.dir/Source/Paddle.cpp.s
 .PHONY : Source/Paddle.cpp.s
 
 Source/main.o: Source/main.cpp.o
@@ -254,7 +254,7 @@ Source/main.o: Source/main.cpp.o
 
 # target to build an object file
 Source/main.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_sdl2_project.dir/build.make CMakeFiles/my_sdl2_project.dir/Source/main.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Pong++.dir/build.make CMakeFiles/Pong++.dir/Source/main.cpp.o
 .PHONY : Source/main.cpp.o
 
 Source/main.i: Source/main.cpp.i
@@ -262,7 +262,7 @@ Source/main.i: Source/main.cpp.i
 
 # target to preprocess a source file
 Source/main.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_sdl2_project.dir/build.make CMakeFiles/my_sdl2_project.dir/Source/main.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Pong++.dir/build.make CMakeFiles/Pong++.dir/Source/main.cpp.i
 .PHONY : Source/main.cpp.i
 
 Source/main.s: Source/main.cpp.s
@@ -270,7 +270,7 @@ Source/main.s: Source/main.cpp.s
 
 # target to generate assembly for a file
 Source/main.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_sdl2_project.dir/build.make CMakeFiles/my_sdl2_project.dir/Source/main.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Pong++.dir/build.make CMakeFiles/Pong++.dir/Source/main.cpp.s
 .PHONY : Source/main.cpp.s
 
 # Help Target
@@ -281,7 +281,7 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... my_sdl2_project"
+	@echo "... Pong++"
 	@echo "... Source/Ball.o"
 	@echo "... Source/Ball.i"
 	@echo "... Source/Ball.s"

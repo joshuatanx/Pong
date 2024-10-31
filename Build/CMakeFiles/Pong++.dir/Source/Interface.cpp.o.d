@@ -1,6 +1,6 @@
-CMakeFiles/my_sdl2_project.dir/Source/Interface.cpp.o: \
-  /Users/joshuatan/Documents/Programming/C++/Pong++/Source/Interface.cpp \
-  /Users/joshuatan/Documents/Programming/C++/Pong++/Source/Interface.h \
+CMakeFiles/Pong++.dir/Source/Interface.cpp.o: \
+  /Users/joshuatan/Documents/Programming/C++/Pong/Source/Interface.cpp \
+  /Users/joshuatan/Documents/Programming/C++/Pong/Source/Interface.h \
   /opt/homebrew/Cellar/sdl2/2.30.8/include/SDL2/SDL.h \
   /opt/homebrew/Cellar/sdl2/2.30.8/include/SDL2/SDL_main.h \
   /opt/homebrew/Cellar/sdl2/2.30.8/include/SDL2/SDL_stdinc.h \

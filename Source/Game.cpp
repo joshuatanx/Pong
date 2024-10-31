@@ -72,6 +72,7 @@ bool Game::init(const std::string title, const Vec2<int> position, const Vec2<in
     InputHandler::init();
     printf("Input handler initialized.\n");
 
+    ball.setOutOfBoundsCallback([this]() {this->newRound();});
     run_status = true;
     printf("Game initialized.\n");
     
@@ -86,10 +87,10 @@ void Game::newGame()
     
     points_player = 0;
     points_opponent = 0;
-    reset();
+    newRound();
 }
 
-void Game::reset()
+void Game::newRound()
 {
     ball.reset();
 
@@ -135,10 +136,7 @@ void Game::update()
 {
     player.update();
     opponent.update();
-    if (ball.update())
-    {
-        reset();
-    }
+    ball.update();
 }
 
 void Game::render(const float interpolation)

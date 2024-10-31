@@ -54,6 +54,12 @@ void Ball::setVelocity(const Vec2<int> velocity)
     this->velocity = velocity;
 }
 
+void Ball::setOutOfBoundsCallback(std::function<void()> callback)
+{
+    outOfBoundsCallback = callback;
+    std::cout << "Set out of bounds callback";
+}
+
 
 // Returns side of ball that experiences collision
 Direction Ball::collisionWithPaddle(Paddle paddle)
@@ -173,16 +179,14 @@ void Ball::move(const Vec2<int> displacement)
     position.y += displacement.y;
 }
 
-bool Ball::update()
+void Ball::update()
 {
     move(velocity);
     handleCollision();
     if (updateScore())
     {
-        reset();
-        return true;
+        outOfBoundsCallback();
     }
-    return false;
 }
 
 void Ball::render(const float interpolation)

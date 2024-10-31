@@ -17,7 +17,7 @@ public:
     bool init(const std::string title, const Vec2<int> position, const Vec2<int> size, const bool fullscreen = false);
 
     void newGame();
-    void reset();
+    void newRound();
     void start();
 
     void processInput();
