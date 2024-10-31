@@ -21,6 +21,7 @@ void Paddle::init(const PaddleType paddle_type, const Vec2<int> position, const 
     this->position = position;
     this->size = size;
     this->colour = colour;
+    direction = None;
 }
 
 PaddleType Paddle::getPaddleType()

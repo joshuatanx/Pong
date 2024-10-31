@@ -14,7 +14,7 @@ private:
     Vec2<int> position;
     Vec2<unsigned int> size;
     Colour colour;
-    Direction direction = None;
+    Direction direction;
 
 public:
     Paddle(const PaddleType paddle_type = Player1, const Vec2<int> position = (Vec2<int>) {0, 0}, const Vec2<unsigned int> size = (Vec2<unsigned int>) {50, 50}, const Colour colour = (Colour) {0, 0, 0, 255});

@@ -47,7 +47,7 @@ bool Game::init(const std::string title, const Vec2<int> position, const Vec2<in
         return false;
     }
     printf("%i x %i\n", display_mode.w, display_mode.h);
-    Game::screen_size = Vec2<uint8_t>{static_cast<uint8_t>(display_mode.w), static_cast<uint8_t>(display_mode.h)};
+    Game::screen_size = (Vec2<uint8_t>){static_cast<uint8_t>(display_mode.w), static_cast<uint8_t>(display_mode.h)};
 
     // attempt to initialize window with given parameters
     window = SDL_CreateWindow(title.c_str(), position.x, position.y, size.x, size.y, flags);
@@ -124,7 +124,7 @@ void Game::processInput()
         player.processInput(InputHandler::keyboard_state);      
         opponent.processInput(InputHandler::keyboard_state);
 
-        if (round_status == false && player.getDirection() != Direction::None)
+        if (round_status == false && player.getDirection() != None)
         {
             start();
         }

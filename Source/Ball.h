@@ -13,7 +13,7 @@ private:
     Vec2<int> position;
     Vec2<unsigned int> size;
     Colour colour;
-    Vec2<int> velocity = {0, 0};
+    Vec2<int> velocity;
 
 public:
     void init(const Vec2<int> position = (Vec2<int>) {0, 0}, const Vec2<unsigned int> size = (Vec2<unsigned int>) {25, 25}, const Colour colour = (Colour) {255, 255, 255});

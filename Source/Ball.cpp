@@ -11,6 +11,7 @@ void Ball::init(const Vec2<int> position, const Vec2<unsigned int> size, const C
     this->position = position;
     this->size = size;
     this->colour = colour;
+    velocity = (Vec2<int>) {0, 0};
 }
     
 Vec2<int> Ball::getPosition()
@@ -135,19 +136,19 @@ void Ball::handleCollision()
 bool Ball::updateScore()
 {
     Direction out = outOfBounds(SCREEN_WIDTH);
-    if (out == Direction::None)
+    if (out == None)
     {
         return false;
     }
 
     switch (outOfBounds(SCREEN_WIDTH))
     {
-    case Direction::Left:
+    case Left:
         Game::points_opponent++;
         printf("P2 Point!");
         break;
     
-    case Direction::Right:
+    case Right:
         Game::points_player++;
         printf("P1 Point!");
         break;

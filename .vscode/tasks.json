@@ -1,0 +1,22 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "build",
+            "type": "shell",
+            "command": "g++",
+            "args": [
+                "-I/opt/homebrew/Cellar/sdl2/2.30.8/include/SDL2",  // Include SDL2 headers
+                "-L/opt/homebrew/Cellar/sdl2/2.30.8/lib",           // SDL2 library path
+                "${workspaceFolder}/Source/*.cpp",  // Your source file
+                "-lSDL2",  // Link SDL2 dynamically
+                "-o", "${workspaceFolder}/Build/Pong++"  // Output executable
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "problemMatcher": ["$gcc"]
+        }
+    ]
+}
