@@ -7,6 +7,8 @@ std::unordered_map<SDL_KeyCode, bool> InputHandler::keyboard_state;
 void InputHandler::init()
 {
         keyboard_state[SDLK_ESCAPE] = false;
+        keyboard_state[SDLK_SPACE] = false;
+        keyboard_state[SDLK_RETURN] = false;
         keyboard_state[SDLK_w] = false;
         keyboard_state[SDLK_a] = false;
         keyboard_state[SDLK_s] = false;
@@ -29,10 +31,19 @@ void InputHandler::processKeyboard(SDL_Event event)
         return;
     }
 
+    // Manually add useable keys because event.key.keysym.sym is SDL_Keycode but the actual keycodes are SDL_KeyCode...
     switch (event.key.keysym.sym)
     {
     case SDLK_ESCAPE:
         keyboard_state[SDLK_ESCAPE] = key_active;
+        break;
+
+    case SDLK_SPACE:
+        keyboard_state[SDLK_SPACE] = key_active;
+        break;
+    
+    case SDLK_RETURN:
+        keyboard_state[SDLK_RETURN] = key_active;
         break;
 
     case SDLK_w:

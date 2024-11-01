@@ -19,7 +19,7 @@ void Interface::update()
 
 void Interface::drawStartScreen()
 {
-    TextureManager::renderText("Press W or D to start.", (SDL_Rect) {SCREEN_WIDTH / 2 - 200, SCREEN_HEIGHT / 2 + 100, 400, 16});
+    TextureManager::renderText("Press Space to start.", (SDL_Rect) {SCREEN_WIDTH / 2 - 200, SCREEN_HEIGHT / 2 + 100, 400, 24});
 }
 
 void Interface::drawScore(const int player_score, const int opponent_score)
@@ -31,12 +31,12 @@ void Interface::drawScore(const int player_score, const int opponent_score)
 void Interface::drawPauseScreen()
 {
     drawScore(Game::getPlayerPoints(), Game::getOpponentPoints());
-    TextureManager::renderText("Press Enter to resume.", (SDL_Rect) {SCREEN_WIDTH / 2 - 200, SCREEN_HEIGHT / 2 + 100, 400, 16});
+    TextureManager::renderText("Press Escape to resume.", (SDL_Rect) {SCREEN_WIDTH / 2 - 200, SCREEN_HEIGHT / 2 + 100, 400, 24});
 }
 
 void Interface::drawGameOverScreen(const int player_score, const int opponent_score)
 {
-    
+
 }
 
 void Interface::render()

@@ -23,7 +23,6 @@ public:
     void render();
 
 private:
-
 };
 
 #endif

@@ -30,6 +30,9 @@ public:
 
     static GameState getGameState();
 
+    static void pause();
+    static void resume();
+
     void processInput();
     void update();
     void render(const float interpolation);

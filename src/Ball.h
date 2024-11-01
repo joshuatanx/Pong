@@ -16,6 +16,7 @@ private:
     Vec2<unsigned int> size;
     Colour colour;
     Vec2<int> velocity;
+    bool is_frozen;
     std::function<void()> outOfBoundsCallback;
 
 public:
@@ -32,6 +33,10 @@ public:
 
     Vec2<int> getVelocity();
     void setVelocity(const Vec2<int> velocity);
+
+    bool isFrozen();
+    void freeze();
+    void unfreeze();
 
     void setOutOfBoundsCallback(std::function<void()> callback);
 

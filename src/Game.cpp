@@ -100,6 +100,7 @@ bool Game::init(const std::string title, const Vec2<int> position, const Vec2<in
     game_state = StartScreen;
 
     run_status = true;
+    round_status = false;
     printf("Game initialized.\n");
     
     return true;
@@ -165,6 +166,22 @@ GameState Game::getGameState()
     return game_state;
 }
 
+void Game::pause()
+{
+    game_state = Paused;
+    player.freeze();
+    opponent.freeze();
+    ball.freeze();
+}
+
+void Game::resume()
+{
+    game_state = Playing;
+    player.unfreeze();
+    opponent.unfreeze();
+    ball.unfreeze();
+}
+
 void Game::processInput()
 {
     SDL_Event event;
@@ -180,14 +197,21 @@ void Game::processInput()
 
         if (InputHandler::isActive(SDLK_ESCAPE))
         {
-            run_status = false;
-            round_status = false;
+            if (game_state == Playing)
+            {
+                pause();
+            }
+            else if (game_state == Paused)
+            {
+                resume();
+            }
+            /* run_status = false;
+            round_status = false; */
         }
 
         player.processInput(InputHandler::keyboard_state);
         opponent.processInput(InputHandler::keyboard_state);
-
-        if (round_status == false && player.getDirection() != None)
+        if (round_status == false && InputHandler::isActive(SDLK_SPACE))
         {
             start();
         }

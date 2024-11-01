@@ -54,6 +54,21 @@ void Ball::setVelocity(const Vec2<int> velocity)
     this->velocity = velocity;
 }
 
+bool Ball::isFrozen()
+{
+    return is_frozen;
+}
+
+void Ball::freeze()
+{
+    is_frozen = true;
+}
+
+void Ball::unfreeze()
+{
+    is_frozen = false;
+}
+
 void Ball::setOutOfBoundsCallback(std::function<void()> callback)
 {
     outOfBoundsCallback = callback;
@@ -179,8 +194,12 @@ void Ball::move(const Vec2<int> displacement)
 }
 
 void Ball::update()
-{
-    move(velocity);
+{   
+    if (!isFrozen())
+    {
+        move(velocity);
+    }
+
     handleCollision();
     if (updateScore())
     {
