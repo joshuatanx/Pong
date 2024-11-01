@@ -6,6 +6,7 @@
 #include <cstddef>
 #include <map>
 #include <SDL.h>
+#include <SDL_ttf.h>
 #include <string>
 #include <unordered_map>
 #include <vector>
@@ -23,7 +24,7 @@ public:
 
     static bool loadFontStyle(const std::string file_path, const std::string font_name, const float font_size, const SDL_Colour font_colour);
     static void unloadCurrentFontStyle();
-    static SDL_Texture* loadTextTexture(const std::string text, const Uint32 wrap_length);
+    static SDL_Texture* loadTextTexture(const std::string text, const Uint32 wrap_length = SCREEN_WIDTH);
     static void releaseTextTexture(const std::string text);
     static void releaseTextTexture(const TextureID texture_id);
     static void renderText(const std::string text, const SDL_Rect destination);

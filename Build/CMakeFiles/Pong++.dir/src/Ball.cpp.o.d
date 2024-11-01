@@ -855,4 +855,5 @@ CMakeFiles/Pong++.dir/src/Ball.cpp.o: \
   /opt/homebrew/Cellar/sdl2/2.30.8/include/SDL2/SDL_version.h \
   /opt/homebrew/Cellar/sdl2/2.30.8/include/SDL2/SDL_locale.h \
   /opt/homebrew/Cellar/sdl2/2.30.8/include/SDL2/SDL_misc.h \
-  /Users/joshuatan/Documents/Programming/C++/Pong/src/Game.h
+  /Users/joshuatan/Documents/Programming/C++/Pong/src/Game.h \
+  /Users/joshuatan/Documents/Programming/C++/Pong/src/Interface.h

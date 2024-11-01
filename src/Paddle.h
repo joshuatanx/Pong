@@ -15,6 +15,7 @@ private:
     Vec2<unsigned int> size;
     Colour colour;
     Direction direction;
+    bool is_frozen;
 
 public:
     Paddle(const PaddleType paddle_type = Player1, const Vec2<int> position = (Vec2<int>) {0, 0}, const Vec2<unsigned int> size = (Vec2<unsigned int>) {50, 50}, const Colour colour = (Colour) {0, 0, 0, 255});
@@ -34,6 +35,10 @@ public:
 
     Direction getDirection();
     void setDirection(const Direction direction);
+
+    bool isFrozen();
+    void freeze();
+    void unfreeze();
 
     void move(const Vec2<int> displacement);
     void processInput(const std::unordered_map<SDL_KeyCode, bool> keyboard_state);

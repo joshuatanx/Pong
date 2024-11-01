@@ -1,5 +1,6 @@
 //  TextureManager.cpp - source file for TextureManager class
 
+#include <iostream>
 #include <SDL_image.h>
 #include <SDL_ttf.h>
 #include <stdexcept>
@@ -123,8 +124,7 @@ void TextureManager::renderText(const std::string text, const SDL_Rect destinati
 {
     if (text_to_texture.find(text) == text_to_texture.end())
     {
-        printf("Could not find texture for text: %s.\n", text.c_str());
-        return;
+        loadTextTexture(text);
     }
 
     SDL_Texture* texture = text_textures[text_to_texture[text]];
@@ -271,7 +271,7 @@ std::string TextureManager::getTextureName(const TextureID texture_id)
 
 void TextureManager::quit()
 {
-    for (auto& [text, texture_id] : text_to_texture)
+    for (const auto& [text, texture_id] : text_to_texture)
     {
         releaseTextTexture(texture_id);
     }

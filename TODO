@@ -1,9 +1,9 @@
 Todo:
-	☐ Add text rendering support @started(24-10-31 18:11)
 	☐ Add glyph-based font rendering
 	☐ Rework texture manager
-	☐ Add score display
+	☐ Add start screen @started(24-11-01 08:58)
 	☐ Add court dividing line
-  	✔ Add callback for when point is scored @done(24-10-31 11:40)
 
 Archive:
+  ✔ Add text rendering support @started(24-10-31 18:11) @done(24-11-01 00:46) @lasted(6h36m) @project(Todo)
+  ✔ Add callback for when point is scored @done(24-10-31 11:40)

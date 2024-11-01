@@ -149,13 +149,13 @@ bool Ball::updateScore()
     switch (outOfBounds(SCREEN_WIDTH))
     {
     case Left:
-        Game::points_opponent++;
-        printf("P2 Point!");
+        Game::addOpponentPoints(1);
+        printf("P2 Point!\n");
         break;
     
     case Right:
-        Game::points_player++;
-        printf("P1 Point!");
+        Game::addPlayerPoints(1);
+        printf("P1 Point!\n");
         break;
     
     default:

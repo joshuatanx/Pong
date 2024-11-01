@@ -33,13 +33,13 @@ struct Vec4
     T w;
 };
 
-// Graphics
-struct Colour
+// 
+enum GameState
 {
-    uint8_t r;
-    uint8_t g;
-    uint8_t b;
-    uint8_t a;
+    StartScreen,
+    Playing,
+    Paused,
+    GameOver
 };
 
 // Movement
@@ -62,6 +62,14 @@ enum PaddleType
 };
 
 // Graphics
+struct Colour
+{
+    uint8_t r;
+    uint8_t g;
+    uint8_t b;
+    uint8_t a;
+};
+
 using TextureID = std::size_t;
 using StyledText = Vec2<std::string>; // (text, font style name)
 

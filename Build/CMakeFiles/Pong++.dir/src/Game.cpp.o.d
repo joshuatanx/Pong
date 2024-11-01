@@ -856,6 +856,7 @@ CMakeFiles/Pong++.dir/src/Game.cpp.o: \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk/usr/include/c++/v1/cstdarg \
   /Users/joshuatan/Documents/Programming/C++/Pong/src/Paddle.h \
   /Users/joshuatan/Documents/Programming/C++/Pong/src/Types.h \
+  /Users/joshuatan/Documents/Programming/C++/Pong/src/Interface.h \
   /opt/homebrew/Cellar/sdl2_image/2.8.2_2/include/SDL2/SDL_image.h \
   /opt/homebrew/Cellar/sdl2_ttf/2.22.0/include/SDL2/SDL_ttf.h \
   /Users/joshuatan/Documents/Programming/C++/Pong/src/InputHandler.h \

@@ -22,6 +22,7 @@ void Paddle::init(const PaddleType paddle_type, const Vec2<int> position, const 
     this->size = size;
     this->colour = colour;
     direction = None;
+    is_frozen = false;
 }
 
 PaddleType Paddle::getPaddleType()
@@ -74,6 +75,21 @@ void Paddle::setDirection(const Direction direction)
     this->direction = direction;
 }
 
+bool Paddle::isFrozen()
+{
+    return is_frozen;
+}
+
+void Paddle::freeze()
+{
+    is_frozen = true;
+}
+
+void Paddle::unfreeze()
+{
+    is_frozen = false;
+}
+
 void Paddle::move(const Vec2<int> displacement)
 {
     position.x += displacement.x;
@@ -115,7 +131,12 @@ void Paddle::processInput(const std::unordered_map<SDL_KeyCode, bool> keyboard_s
 }
 
 void Paddle::update()
-{
+{   
+    if (isFrozen())
+    {
+        return;
+    }
+
     switch (direction)
     {
     case Up:

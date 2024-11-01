@@ -855,4 +855,5 @@ CMakeFiles/Pong++.dir/src/main.cpp.o: \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk/usr/include/c++/v1/__bsd_locale_defaults.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk/usr/include/c++/v1/cstdarg \
   /Users/joshuatan/Documents/Programming/C++/Pong/src/Paddle.h \
-  /Users/joshuatan/Documents/Programming/C++/Pong/src/Types.h
+  /Users/joshuatan/Documents/Programming/C++/Pong/src/Types.h \
+  /Users/joshuatan/Documents/Programming/C++/Pong/src/Interface.h

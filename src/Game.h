@@ -8,6 +8,7 @@
 #include <vector>
 
 #include "Ball.h"
+#include "Interface.h"
 #include "Paddle.h"
 #include "Types.h"
 
@@ -19,6 +20,15 @@ public:
     void newGame();
     void newRound();
     void start();
+
+    static int getPlayerPoints();
+    static int getOpponentPoints();
+    static void setPlayerPoints(const int points);
+    static void setOpponentPoints(const int points);
+    static void addPlayerPoints(const int points);
+    static void addOpponentPoints(const int points);
+
+    static GameState getGameState();
 
     void processInput();
     void update();
@@ -33,6 +43,7 @@ public:
     void startRound()
     {
         round_status = true;
+        game_state = Playing;
     }
 
     void endRound()
@@ -49,15 +60,17 @@ public:
     static Vec2<uint8_t> screen_size;
     static Vec2<uint8_t> window_size;
 
+    static Interface interface;
+
     static std::vector<Paddle> paddles;
     static Paddle player;
     static Paddle opponent;
     static Ball ball;
 
+private:
     static int points_player;
     static int points_opponent;
-
-private:
+    static GameState game_state;
     bool run_status;
     bool round_status;
     SDL_Window* window;

@@ -15,12 +15,15 @@
 SDL_Renderer* Game::renderer = nullptr;
 Vec2<uint8_t> Game::screen_size;
 
+Interface Game::interface;
+
 Paddle Game::player;
 Paddle Game::opponent;
 Ball Game::ball;
 
 int Game::points_player;
 int Game::points_opponent;
+GameState Game::game_state;
 
 bool Game::init(const std::string title, const Vec2<int> position, const Vec2<int> size, const bool fullscreen)
 {
@@ -90,13 +93,14 @@ bool Game::init(const std::string title, const Vec2<int> position, const Vec2<in
         return false;
     }
 
+    TextureManager::loadFontStyle("assets/fonts/Vogue.ttf", "Vogue", 16, (SDL_Colour) {255, 255, 255});
+    printf("Font initialized.\n");
+
     ball.setOutOfBoundsCallback([this]() {this->newRound();});
+    game_state = StartScreen;
 
     run_status = true;
     printf("Game initialized.\n");
-
-    TextureManager::loadFontStyle("assets/fonts/Vogue.ttf", "Vogue", 16, (SDL_Colour) {255, 255, 255});
-    TextureManager::loadTextTexture("ur mom", 200);
     
     return true;
 }
@@ -123,6 +127,42 @@ void Game::start()
 {
     ball.setVelocity((Vec2<int>) {5, 5});
     round_status = true;
+    game_state = Playing;
+}
+
+int Game::getPlayerPoints()
+{
+    return points_player;
+}
+
+int Game::getOpponentPoints()
+{
+    return points_opponent;
+}
+
+void Game::setPlayerPoints(const int points)
+{
+    points_player = points;
+}
+
+void Game::setOpponentPoints(const int points)
+{
+    points_opponent = points;
+}
+
+void Game::addPlayerPoints(const int points)
+{
+    points_player += points;
+}
+
+void Game::addOpponentPoints(const int points)
+{
+    points_opponent += points;
+}
+
+GameState Game::getGameState()
+{
+    return game_state;
 }
 
 void Game::processInput()
@@ -144,7 +184,7 @@ void Game::processInput()
             round_status = false;
         }
 
-        player.processInput(InputHandler::keyboard_state);      
+        player.processInput(InputHandler::keyboard_state);
         opponent.processInput(InputHandler::keyboard_state);
 
         if (round_status == false && player.getDirection() != None)
@@ -171,7 +211,7 @@ void Game::render(const float interpolation)
     player.render(interpolation);
     opponent.render(interpolation);
     ball.render(interpolation);
-    TextureManager::renderText("ur mom", (SDL_Rect) {0, 0, 100, 100});
+    interface.render();
 
     SDL_RenderPresent(renderer);
 }
@@ -181,8 +221,8 @@ void Game::quit()
     SDL_DestroyWindow(window);
     SDL_DestroyRenderer(renderer);
 
-    TTF_Quit();
     TextureManager::quit();
+    TTF_Quit();
     IMG_Quit();
     SDL_Quit();
 
