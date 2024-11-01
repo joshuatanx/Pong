@@ -15,6 +15,7 @@ public:
     void init();
     void update();
 
+    void drawGameModeScreen();
     void drawStartScreen();
     void drawScore(const int player_score, const int opponent_score);
     void drawNet();

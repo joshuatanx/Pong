@@ -4213,6 +4213,7 @@ CMakeFiles/Pong++.dir/src/Interface.cpp.o: /Users/joshuatan/Documents/Programmin
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/15.0.0/include/stddef.h \
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/15.0.0/include/stdint.h \
   /Users/joshuatan/Documents/Programming/C++/Pong/src/Ball.h \
+  /Users/joshuatan/Documents/Programming/C++/Pong/src/Draw.h \
   /Users/joshuatan/Documents/Programming/C++/Pong/src/Game.h \
   /Users/joshuatan/Documents/Programming/C++/Pong/src/Interface.h \
   /Users/joshuatan/Documents/Programming/C++/Pong/src/Paddle.h \

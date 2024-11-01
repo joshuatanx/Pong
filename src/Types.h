@@ -36,7 +36,8 @@ struct Vec4
 // 
 enum GameState
 {
-    StartScreen,
+    SelectGameMode,
+    Ready,
     Playing,
     Paused,
     GameOver

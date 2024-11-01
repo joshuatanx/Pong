@@ -98,7 +98,7 @@ bool Game::init(const std::string title, const Vec2<int> position, const Vec2<in
     printf("Font initialized.\n");
 
     ball.setOutOfBoundsCallback([this]() {this->newRound();});
-    game_state = StartScreen;
+    game_state = SelectGameMode;
 
     run_status = true;
     round_status = false;
@@ -123,6 +123,7 @@ void Game::newRound()
     ball.reset();
 
     round_status = false;
+    game_state = Ready;
 }
 
 void Game::start()
@@ -196,32 +197,62 @@ void Game::processInput()
 
         InputHandler::processKeyboard(event);
 
-        if (InputHandler::isActive(SDLK_ESCAPE))
+        switch (game_state)
         {
-            if (game_state == Playing)
+        case SelectGameMode:
+            printf("hi\n");
+            if (InputHandler::isActive(SDLK_1))
+            {
+                newGame();
+            }
+            break;
+
+        case Ready:
+            if (InputHandler::isActive(SDLK_SPACE))
+            {
+                start();
+            }
+            break;
+
+        case Playing:
+            if (InputHandler::isActive(SDLK_ESCAPE))
             {
                 pause();
             }
-            else if (game_state == Paused)
+            player.processInput(InputHandler::keyboard_state);
+            opponent.processInput(InputHandler::keyboard_state);
+            break;
+
+        case Paused:
+            if (InputHandler::isActive(SDLK_ESCAPE))
             {
                 resume();
             }
-        }
+            break;
 
-        player.processInput(InputHandler::keyboard_state);
-        opponent.processInput(InputHandler::keyboard_state);
-        if (round_status == false && InputHandler::isActive(SDLK_SPACE))
-        {
-            start();
+        case GameOver:
+            // quit();
+            break;
+
+        default:
+            break;
         }
     }
 }
 
 void Game::update()
 {
-    player.update();
-    opponent.update();
-    ball.update();
+    switch (game_state)
+    {
+    case Playing:
+        player.update();
+        opponent.update();
+        ball.update();
+        break;
+
+    default:
+        break;
+    }
 }
 
 void Game::render(const float interpolation)
@@ -230,11 +261,38 @@ void Game::render(const float interpolation)
     SDL_SetRenderDrawColor(renderer, 0, 0, 0, 255);
     SDL_RenderClear(renderer);
 
-    // Render objects
-    player.render(interpolation);
-    opponent.render(interpolation);
-    ball.render(interpolation);
-    interface.render();
+    switch (game_state)
+    {
+    case SelectGameMode:
+        interface.render();
+        break;
+
+    case Ready:
+        interface.render();
+        player.render(interpolation);
+        opponent.render(interpolation);
+        ball.render(interpolation);
+        break;
+
+    case Playing:
+        player.render(interpolation);
+        opponent.render(interpolation);
+        ball.render(interpolation);
+        interface.render();
+        break;
+    
+    case Paused:
+        player.render(interpolation);
+        opponent.render(interpolation);
+        ball.render(interpolation);
+        interface.render();
+
+    case GameOver:
+        interface.render();
+
+    default:
+        break;
+    }
 
     SDL_RenderPresent(renderer);
 }
