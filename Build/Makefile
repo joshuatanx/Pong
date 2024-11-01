@@ -153,6 +153,30 @@ src/Ball.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Pong++.dir/build.make CMakeFiles/Pong++.dir/src/Ball.cpp.s
 .PHONY : src/Ball.cpp.s
 
+src/Draw.o: src/Draw.cpp.o
+.PHONY : src/Draw.o
+
+# target to build an object file
+src/Draw.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Pong++.dir/build.make CMakeFiles/Pong++.dir/src/Draw.cpp.o
+.PHONY : src/Draw.cpp.o
+
+src/Draw.i: src/Draw.cpp.i
+.PHONY : src/Draw.i
+
+# target to preprocess a source file
+src/Draw.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Pong++.dir/build.make CMakeFiles/Pong++.dir/src/Draw.cpp.i
+.PHONY : src/Draw.cpp.i
+
+src/Draw.s: src/Draw.cpp.s
+.PHONY : src/Draw.s
+
+# target to generate assembly for a file
+src/Draw.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Pong++.dir/build.make CMakeFiles/Pong++.dir/src/Draw.cpp.s
+.PHONY : src/Draw.cpp.s
+
 src/Game.o: src/Game.cpp.o
 .PHONY : src/Game.o
 
@@ -309,6 +333,9 @@ help:
 	@echo "... src/Ball.o"
 	@echo "... src/Ball.i"
 	@echo "... src/Ball.s"
+	@echo "... src/Draw.o"
+	@echo "... src/Draw.i"
+	@echo "... src/Draw.s"
 	@echo "... src/Game.o"
 	@echo "... src/Game.i"
 	@echo "... src/Game.s"

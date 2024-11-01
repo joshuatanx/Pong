@@ -4,6 +4,7 @@
 
 #include <string>
 
+#include "Draw.h"
 #include "Game.h"
 #include "TextureManager.h"
 
@@ -20,6 +21,7 @@ void Interface::update()
 void Interface::drawStartScreen()
 {
     TextureManager::renderText("Press Space to start.", (SDL_Rect) {SCREEN_WIDTH / 2 - 200, SCREEN_HEIGHT / 2 + 100, 400, 24});
+    
 }
 
 void Interface::drawScore(const int player_score, const int opponent_score)
@@ -28,9 +30,15 @@ void Interface::drawScore(const int player_score, const int opponent_score)
     TextureManager::renderText(std::to_string(opponent_score), (SDL_Rect) {(SCREEN_WIDTH / 4) * 3 - 50, SCREEN_HEIGHT / 10, 50, 75});
 }
 
+void Interface::drawNet()
+{
+    Draw::stripedRectangle(SCREEN_WIDTH / 2 - 3, 0, 6, SCREEN_HEIGHT, (Colour) {255, 255, 255, 100}, true, Up, 10, 25);
+}
+
 void Interface::drawPauseScreen()
 {
     drawScore(Game::getPlayerPoints(), Game::getOpponentPoints());
+    Draw::stripedRectangle(SCREEN_WIDTH / 2 - 3, 0, 6, SCREEN_HEIGHT, (Colour) {255, 255, 255, 100}, true, Up, 10, 25);
     TextureManager::renderText("Press Escape to resume.", (SDL_Rect) {SCREEN_WIDTH / 2 - 200, SCREEN_HEIGHT / 2 + 100, 400, 24});
 }
 
@@ -49,6 +57,7 @@ void Interface::render()
     
     case Playing:
         drawScore(Game::getPlayerPoints(), Game::getOpponentPoints());
+        drawNet();
         break;
 
     case Paused:

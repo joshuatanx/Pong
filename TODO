@@ -1,10 +1,11 @@
 Todo:
-	☐ Implement game states
+	☐ Add basic shape drawing @started(24-11-01 15:48)
 	☐ Add glyph-based font rendering
 	☐ Rework texture manager
 	☐ Add court dividing line
 
 Archive:
+  ✔ Implement game states @done(24-11-01 15:48) @project(Todo)
   ✔ Implement basic start screen and scoreboard @started(24-11-01 08:58) @done(24-11-01 14:35) @lasted(5h37m31s) @project(Todo)
   ✔ Add text rendering support @started(24-10-31 18:11) @done(24-11-01 00:46) @lasted(6h36m) @project(Todo)
   ✔ Add callback for when point is scored @done(24-10-31 11:40)

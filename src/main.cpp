@@ -6,16 +6,12 @@
 #include <cstdint>
 
 #include "Game.h"
-#include "Paddle.h"
 #include "Types.h"
 
 Game* game = nullptr;
 
 int main(int argc, char* args[])
 {
-    /* Paddle player((Vec2<int>) {5, 5}, (Vec2<int>) {75, 25});
-    printf("X: %i\n", player.getPosition().x); */
-
     Uint64 next_tick = SDL_GetTicks64();
     int loops;
     float interpolation;
