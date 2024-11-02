@@ -11,6 +11,7 @@ void InputHandler::init()
         keyboard_state[SDLK_RETURN] = false;
         keyboard_state[SDLK_1] = false;
         keyboard_state[SDLK_2] = false;
+        keyboard_state[SDLK_3] = false;
         keyboard_state[SDLK_w] = false;
         keyboard_state[SDLK_a] = false;
         keyboard_state[SDLK_s] = false;
@@ -56,6 +57,10 @@ void InputHandler::processKeyboard(SDL_Event event)
         keyboard_state[SDLK_2] = key_active;
         break;
 
+    case SDLK_3:
+        keyboard_state[SDLK_3] = key_active;
+        break;
+    
     case SDLK_w:
         keyboard_state[SDLK_w] = key_active;
         break;

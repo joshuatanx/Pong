@@ -14,18 +14,22 @@ private:
     Vec2<int> position;
     Vec2<unsigned int> size;
     Colour colour;
+    unsigned int speed;
     Direction direction;
     bool is_frozen;
 
 public:
-    Paddle(const PaddleType paddle_type = Player1, const Vec2<int> position = (Vec2<int>) {0, 0}, const Vec2<unsigned int> size = (Vec2<unsigned int>) {50, 50}, const Colour colour = (Colour) {0, 0, 0, 255});
-    void init(const PaddleType paddle_type = Player1, const Vec2<int> position = (Vec2<int>) {0, 0}, const Vec2<unsigned int> size = (Vec2<unsigned int>) {50, 50}, const Colour colour = (Colour) {0, 0, 0, 255});
+    Paddle(const PaddleType paddle_type = Player1, const Vec2<int> position = (Vec2<int>) {0, 0}, const Vec2<unsigned int> size = (Vec2<unsigned int>) {50, 50}, const Colour colour = (Colour) {0, 0, 0, 255}, const unsigned int speed = 7);
+    void init(const PaddleType paddle_type = Player1, const Vec2<int> position = (Vec2<int>) {0, 0}, const Vec2<unsigned int> size = (Vec2<unsigned int>) {50, 50}, const Colour colour = (Colour) {0, 0, 0, 255}, const unsigned int speed = 7);
 
     PaddleType getPaddleType();
     void setPaddleType(const PaddleType paddle_type);
 
     Vec2<int> getPosition();
     void setPosition(const Vec2<int> position);
+
+    unsigned int getSpeed();
+    void setSpeed(const unsigned int speed);
 
     Vec2<unsigned int> getSize();
     void setSize(const Vec2<unsigned int> size);

@@ -23,7 +23,8 @@ void Interface::drawGameModeScreen()
     TextureManager::renderText("Pong++", (SDL_Rect) {SCREEN_WIDTH / 2 - 100, SCREEN_HEIGHT / 8, 200, 64});
     TextureManager::renderText("Game mode select:", (SDL_Rect) {SCREEN_WIDTH / 2 - 150, SCREEN_HEIGHT / 2 + 25, 300, 36});
     TextureManager::renderText("1) Standard", (SDL_Rect) {SCREEN_WIDTH / 2 - 125, SCREEN_HEIGHT / 2 + 100, 250, 36});
-    TextureManager::renderText("2) Pong++", (SDL_Rect) {SCREEN_WIDTH / 2 - 125, SCREEN_HEIGHT / 2 + 150, 250, 36});
+    TextureManager::renderText("2) Pong+", (SDL_Rect) {SCREEN_WIDTH / 2 - 125, SCREEN_HEIGHT / 2 + 150, 250, 36});
+    TextureManager::renderText("3) Pong++", (SDL_Rect) {SCREEN_WIDTH / 2 - 125, SCREEN_HEIGHT / 2 + 200, 250, 36});
 }
 
 void Interface::drawStartScreen()

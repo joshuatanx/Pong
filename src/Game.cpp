@@ -112,19 +112,20 @@ bool Game::init(const std::string title, const Vec2<int> position, const Vec2<in
 
 void Game::newGame(const GameMode game_mode)
 {
-    printf("new game\n");
-    player.init(Player1, (Vec2<int>) {0, 250}, (Vec2<unsigned int>) {12, 100}, (Colour) {255, 255, 255, 255});
-    opponent.init(Player2, (Vec2<int>) {588, 250}, (Vec2<unsigned int>) {12, 100}, (Colour) {255, 255, 255, 255});
+    unsigned int paddle_speed;
+    
     balls.clear();
 
     switch (game_mode)
     {
     case Standard:
+        paddle_speed = 7;
         balls.push_back(Ball());
         balls[balls.size() - 1].init((Vec2<int>) {294, 0}, (Vec2<unsigned int>) {12, 12}, (Colour) {255, 255, 255, 255}, (Vec2<int>) {static_cast<int>(SCREEN_WIDTH / 2) - 6, static_cast<int>(SCREEN_HEIGHT / 2) - 6});
         break;
 
     case Plus:
+        paddle_speed = 9;
         balls.push_back(Ball());
         balls[balls.size() - 1].init((Vec2<int>) {294, 0}, (Vec2<unsigned int>) {12, 12}, (Colour) {255, 255, 255, 255}, (Vec2<int>) {static_cast<int>(SCREEN_WIDTH / 2) - 6, static_cast<int>(SCREEN_HEIGHT / 3) - 6});
         balls.push_back(Ball());
@@ -132,6 +133,7 @@ void Game::newGame(const GameMode game_mode)
         break;
 
     case PlusPlus:
+        paddle_speed = 12;
         balls.push_back(Ball());
         balls[balls.size() - 1].init((Vec2<int>) {294, 0}, (Vec2<unsigned int>) {12, 12}, (Colour) {255, 255, 255, 255}, (Vec2<int>) {static_cast<int>(SCREEN_WIDTH / 2) - 6, static_cast<int>(SCREEN_HEIGHT / 4) - 6});
         balls.push_back(Ball());
@@ -147,6 +149,9 @@ void Game::newGame(const GameMode game_mode)
     {
         balls[i].setOutOfBoundsCallback([this]() {this->newRound();});
     }
+
+    player.init(Player1, (Vec2<int>) {0, 250}, (Vec2<unsigned int>) {12, 75}, (Colour) {255, 255, 255, 255}, paddle_speed);
+    opponent.init(Player2, (Vec2<int>) {588, 250}, (Vec2<unsigned int>) {12, 75}, (Colour) {255, 255, 255, 255}, paddle_speed);
     
     points_player = 0;
     points_opponent = 0;
@@ -166,9 +171,15 @@ void Game::newRound()
 
 void Game::start()
 {  
+    int winner_direction = 0;
+    if (points_player > points_opponent)
+    {
+        winner_direction = 1;
+    }
+
     for (int i = 0; i < balls.size(); i++)
     {
-        int speed = balls[i].getSpeed() * std::pow(-1, i);
+        int speed = balls[i].getSpeed() * std::pow(-1, i + winner_direction);
         balls[i].setVelocity((Vec2<int>) {speed, speed});
     }
     round_status = true;

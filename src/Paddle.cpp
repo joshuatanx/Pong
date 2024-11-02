@@ -7,20 +7,23 @@
 #include "Game.h"
 #include "InputHandler.h"
 
-Paddle::Paddle(const PaddleType paddle_type, const Vec2<int> position, const Vec2<unsigned int> size, const Colour colour)
+Paddle::Paddle(const PaddleType paddle_type, const Vec2<int> position, const Vec2<unsigned int> size, const Colour colour, const unsigned int speed)
 {
     this->paddle_type = paddle_type;
     this->position = position;
     this->size = size;
     this->colour = colour;
+    direction = None;
+    is_frozen = false;
 }
 
-void Paddle::init(const PaddleType paddle_type, const Vec2<int> position, const Vec2<unsigned int> size, const Colour colour)
+void Paddle::init(const PaddleType paddle_type, const Vec2<int> position, const Vec2<unsigned int> size, const Colour colour, const unsigned int speed)
 {
     this->paddle_type = paddle_type;
     this->position = position;
     this->size = size;
     this->colour = colour;
+    this->speed = speed;
     direction = None;
     is_frozen = false;
 }
@@ -43,6 +46,16 @@ Vec2<int> Paddle::getPosition()
 void Paddle::setPosition(const Vec2<int> position)
 {
     this->position = position;
+}
+
+unsigned int Paddle::getSpeed()
+{
+    return speed;
+}
+
+void Paddle::setSpeed(const unsigned int speed)
+{
+    this->speed = speed;
 }
 
 Vec2<unsigned int> Paddle::getSize()
@@ -140,11 +153,11 @@ void Paddle::update()
     switch (direction)
     {
     case Up:
-        move((Vec2<int>) {0, -5});
+        move((Vec2<int>) {0, -1 * static_cast<int>(speed)});
         break;
 
     case Down:
-        move((Vec2<int>) {0, 5});
+        move((Vec2<int>) {0, static_cast<int>(speed)});
         break;
     
     default:

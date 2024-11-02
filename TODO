@@ -1,4 +1,5 @@
 Todo:
+  ☐ Un-hard-code paddle speed
   ☐ Add glyph-based font rendering
 	☐ Rework texture manager
 
