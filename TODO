@@ -1,8 +1,10 @@
 Todo:
-	☐ Add glyph-based font rendering
+  ☐ Add impact angle on ball collisions @started(24-11-02 15:59)
+  ☐ Add glyph-based font rendering
 	☐ Rework texture manager
 
 Archive:
+  ✔ Add multi-ball support @done(24-11-02 15:55)
   ✔ Add court dividing line @done(24-11-01 19:05) @project(Todo)
   ✔ Add basic shape drawing @started(24-11-01 15:48) @done(24-11-01 19:05) @lasted(3h17m29s) @project(Todo)
   ✔ Implement game states @done(24-11-01 15:48) @project(Todo)

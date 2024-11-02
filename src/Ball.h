@@ -49,6 +49,8 @@ public:
     void setOutOfBoundsCallback(std::function<void()> callback);
 
     Direction collisionWithPaddle(Paddle paddle);
+    float angleOfCollision(Paddle paddle, Direction side_of_impact);
+    Vec2<int> velocityAfterCollision(Paddle paddle);
     Direction collisionWithWall(const int screen_height);
     Direction outOfBounds(const int screen_width);
     void handleCollision();

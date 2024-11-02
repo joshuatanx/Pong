@@ -169,7 +169,6 @@ void Game::start()
     for (int i = 0; i < balls.size(); i++)
     {
         int speed = balls[i].getSpeed() * std::pow(-1, i);
-        printf("%d\n", speed);
         balls[i].setVelocity((Vec2<int>) {speed, speed});
     }
     round_status = true;

@@ -3,6 +3,7 @@
 #include "Ball.h"
 
 #include <SDL.h>
+#include <cmath>
 
 #include "Game.h"
 
@@ -135,6 +136,58 @@ Direction Ball::collisionWithPaddle(Paddle paddle)
     return None;
 }
 
+float Ball::angleOfCollision(Paddle paddle, Direction side_of_impact)
+{
+    PaddleType paddle_type = paddle.getPaddleType();
+    Vec2<int> paddle_position = paddle.getPosition();
+    Vec2<unsigned int> paddle_size = paddle.getSize();
+
+    float distance_from_centre = (position.y + size.y / 2) - (paddle_position.y + paddle_size.y / 2);
+    return (distance_from_centre / (paddle_size.y / 2)) * M_PI_2;
+}
+
+Vec2<int> Ball::velocityAfterCollision(Paddle paddle)
+{
+    PaddleType paddle_type = paddle.getPaddleType();
+    Vec2<int> paddle_position = paddle.getPosition();
+    Vec2<unsigned int> paddle_size = paddle.getSize();
+
+    Vec2<int> direction = {0, 0};
+    if (paddle_type == Player1)
+    {
+        direction.x = 1;
+    }
+    else
+    {
+        direction.x = -1;
+    }
+
+    if (position.y - size.y / 2 > paddle_position.y - paddle_size.y / 2)
+    {
+        direction.y = 1;
+    }
+    else
+    {
+        direction.y = -1;
+    }
+
+    float distance_from_centre = (position.y + size.y / 2) - (paddle_position.y + paddle_size.y / 2);
+    float percent_from_centre = std::abs(distance_from_centre / (paddle_size.y / 2));
+    float velocity_norm = std::sqrt(std::pow(velocity.x, 2) + std::pow(velocity.y, 2));
+
+    Vec2<double> most_angled_velocity = (Vec2<double>) {velocity_norm * std::sin(M_PI / 4), velocity_norm * std::cos(M_PI / 4)}; // first application of analysis
+    Vec2<int> final_velocity = (Vec2<int>) {direction.x * static_cast<int>(percent_from_centre * most_angled_velocity.x + (1 - percent_from_centre) * velocity_norm), direction.y * static_cast<int>((1 - percent_from_centre) * most_angled_velocity.y + percent_from_centre * velocity_norm)};
+    
+    if (final_velocity.x == 0)
+    {
+        final_velocity.x = direction.x;
+    }
+
+    printf("distance %f, percent %f, norm %f, most angled velocity (%f, %f), final velocity (%d, %d)\n", distance_from_centre, percent_from_centre, velocity_norm, most_angled_velocity.x, most_angled_velocity.y, final_velocity.x, final_velocity.y);
+
+    return final_velocity;
+}
+
 Direction Ball::collisionWithWall(const int screen_height)
 {
     if (position.y <= 0)
@@ -164,9 +217,17 @@ Direction Ball::outOfBounds(const int screen_width)
 
 void Ball::handleCollision()
 {
-    if (collisionWithPaddle(Game::player) != None || collisionWithPaddle(Game::opponent) != None)
+    /* if (collisionWithPaddle(Game::player) != None || collisionWithPaddle(Game::opponent) != None)
     {
         velocity.x *= -1;
+    } */
+    if (collisionWithPaddle(Game::player) != None)
+    {
+        velocity = velocityAfterCollision(Game::player);
+    }
+    else if (collisionWithPaddle(Game::opponent) != None)
+    {
+        velocity = velocityAfterCollision(Game::opponent);
     }
 
     if (collisionWithWall(SCREEN_HEIGHT) != None)
