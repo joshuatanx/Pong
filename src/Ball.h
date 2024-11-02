@@ -22,7 +22,7 @@ private:
     std::function<void()> outOfBoundsCallback;
 
 public:
-    void init(const Vec2<int> position = (Vec2<int>) {0, 0}, const Vec2<unsigned int> size = (Vec2<unsigned int>) {24, 24}, const Colour colour = (Colour) {255, 255, 255}, const Vec2<int> default_position = (Vec2<int>) {SCREEN_WIDTH / 2 - 12, SCREEN_HEIGHT / 2 - 12}, const unsigned int speed = 5);
+    void init(const Vec2<int> position = (Vec2<int>) {0, 0}, const Vec2<unsigned int> size = (Vec2<unsigned int>) {24, 24}, const Colour colour = (Colour) {255, 255, 255}, const Vec2<int> default_position = (Vec2<int>) {SCREEN_WIDTH / 2 - 12, SCREEN_HEIGHT / 2 - 12}, const unsigned int speed = 7);
     
     Vec2<int> getPosition();
     void setPosition(const Vec2<int> position);

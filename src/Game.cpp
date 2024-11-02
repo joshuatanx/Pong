@@ -113,33 +113,34 @@ bool Game::init(const std::string title, const Vec2<int> position, const Vec2<in
 void Game::newGame(const GameMode game_mode)
 {
     unsigned int paddle_speed;
+    unsigned int ball_speed = 8;
     
     balls.clear();
 
     switch (game_mode)
     {
     case Standard:
-        paddle_speed = 7;
+        paddle_speed = 10;
         balls.push_back(Ball());
-        balls[balls.size() - 1].init((Vec2<int>) {294, 0}, (Vec2<unsigned int>) {12, 12}, (Colour) {255, 255, 255, 255}, (Vec2<int>) {static_cast<int>(SCREEN_WIDTH / 2) - 6, static_cast<int>(SCREEN_HEIGHT / 2) - 6});
+        balls[balls.size() - 1].init((Vec2<int>) {294, 0}, (Vec2<unsigned int>) {12, 12}, (Colour) {255, 255, 255, 255}, (Vec2<int>) {static_cast<int>(SCREEN_WIDTH / 2) - 6, static_cast<int>(SCREEN_HEIGHT / 2) - 6}, ball_speed);
         break;
 
     case Plus:
-        paddle_speed = 9;
+        paddle_speed = 15;
         balls.push_back(Ball());
-        balls[balls.size() - 1].init((Vec2<int>) {294, 0}, (Vec2<unsigned int>) {12, 12}, (Colour) {255, 255, 255, 255}, (Vec2<int>) {static_cast<int>(SCREEN_WIDTH / 2) - 6, static_cast<int>(SCREEN_HEIGHT / 3) - 6});
+        balls[balls.size() - 1].init((Vec2<int>) {294, 0}, (Vec2<unsigned int>) {12, 12}, (Colour) {255, 255, 255, 255}, (Vec2<int>) {static_cast<int>(SCREEN_WIDTH / 2) - 6, static_cast<int>(SCREEN_HEIGHT / 3) - 6}, ball_speed);
         balls.push_back(Ball());
-        balls[balls.size() - 1].init((Vec2<int>) {294, 50}, (Vec2<unsigned int>) {12, 12}, (Colour) {255, 255, 255, 255}, (Vec2<int>) {static_cast<int>(SCREEN_WIDTH / 2) - 6, static_cast<int>(SCREEN_HEIGHT / 3 * 2) - 6});
+        balls[balls.size() - 1].init((Vec2<int>) {294, 50}, (Vec2<unsigned int>) {12, 12}, (Colour) {255, 255, 255, 255}, (Vec2<int>) {static_cast<int>(SCREEN_WIDTH / 2) - 6, static_cast<int>(SCREEN_HEIGHT / 3 * 2) - 6}, ball_speed);
         break;
 
     case PlusPlus:
-        paddle_speed = 12;
+        paddle_speed = 18;
         balls.push_back(Ball());
-        balls[balls.size() - 1].init((Vec2<int>) {294, 0}, (Vec2<unsigned int>) {12, 12}, (Colour) {255, 255, 255, 255}, (Vec2<int>) {static_cast<int>(SCREEN_WIDTH / 2) - 6, static_cast<int>(SCREEN_HEIGHT / 4) - 6});
+        balls[balls.size() - 1].init((Vec2<int>) {294, 0}, (Vec2<unsigned int>) {12, 12}, (Colour) {255, 255, 255, 255}, (Vec2<int>) {static_cast<int>(SCREEN_WIDTH / 2) - 6, static_cast<int>(SCREEN_HEIGHT / 4) - 6}, ball_speed);
         balls.push_back(Ball());
-        balls[balls.size() - 1].init((Vec2<int>) {294, 50}, (Vec2<unsigned int>) {12, 12}, (Colour) {255, 255, 255, 255}, (Vec2<int>) {static_cast<int>(SCREEN_WIDTH / 2) - 6, static_cast<int>(SCREEN_HEIGHT / 4 * 2) - 6});
+        balls[balls.size() - 1].init((Vec2<int>) {294, 50}, (Vec2<unsigned int>) {12, 12}, (Colour) {255, 255, 255, 255}, (Vec2<int>) {static_cast<int>(SCREEN_WIDTH / 2) - 6, static_cast<int>(SCREEN_HEIGHT / 4 * 2) - 6}, ball_speed);
         balls.push_back(Ball());
-        balls[balls.size() - 1].init((Vec2<int>) {294, 100}, (Vec2<unsigned int>) {12, 12}, (Colour) {255, 255, 255, 255}, (Vec2<int>) {static_cast<int>(SCREEN_WIDTH / 2) - 6, static_cast<int>(SCREEN_HEIGHT / 4 * 3) - 6});
+        balls[balls.size() - 1].init((Vec2<int>) {294, 100}, (Vec2<unsigned int>) {12, 12}, (Colour) {255, 255, 255, 255}, (Vec2<int>) {static_cast<int>(SCREEN_WIDTH / 2) - 6, static_cast<int>(SCREEN_HEIGHT / 4 * 3) - 6}, ball_speed);
     
     default:
         break;
@@ -180,7 +181,7 @@ void Game::start()
     for (int i = 0; i < balls.size(); i++)
     {
         int speed = balls[i].getSpeed() * std::pow(-1, i + winner_direction);
-        balls[i].setVelocity((Vec2<int>) {speed, speed});
+        balls[i].setVelocity((Vec2<int>) {static_cast<int>(static_cast<float>(speed) / std::sqrt(2)), static_cast<int>(static_cast<float>(speed) / std::sqrt(2))});
     }
     round_status = true;
     game_state = Playing;
@@ -292,6 +293,9 @@ void Game::processInput()
             {
                 start();
             }
+            player.processInput(InputHandler::keyboard_state);
+            opponent.processInput(InputHandler::keyboard_state);
+
             break;
 
         case Playing:
@@ -324,6 +328,11 @@ void Game::update()
 {
     switch (game_state)
     {
+    case Ready:
+        player.update();
+        opponent.update();
+        break;
+    
     case Playing:
         player.update();
         opponent.update();

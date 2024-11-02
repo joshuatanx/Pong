@@ -152,27 +152,31 @@ Vec2<int> Ball::velocityAfterCollision(Paddle paddle)
         direction.x = -1;
     }
 
-    if (position.y - size.y / 2 > paddle_position.y - paddle_size.y / 2)
+    if (position.y - size.y / 2 < paddle_position.y + paddle_size.y / 2)
     {
-        direction.y = 1;
+        direction.y = -1;
     }
     else
     {
-        direction.y = -1;
+        direction.y = 1;
     }
 
     float distance_from_centre = (static_cast<float>(position.y) + static_cast<float>(size.y) / 2) - (static_cast<float>(paddle_position.y) + static_cast<float>(paddle_size.y) / 2);
     float percent_from_centre = std::abs(distance_from_centre / (paddle_size.y / 2));
-    float velocity_norm = std::sqrt(2 * std::pow(speed, 2));
+    float angle = std::sqrt(std::log(percent_from_centre * (M_E - 1) + 1)) * M_PI_4;
 
-    Vec2<double> most_angled_velocity = (Vec2<double>) {velocity_norm * std::sin(M_PI / 4), velocity_norm * std::cos(M_PI / 4)}; // first application of analysis
-    Vec2<int> final_velocity = (Vec2<int>) {direction.x * static_cast<int>(percent_from_centre * most_angled_velocity.x + (1 - percent_from_centre) * velocity_norm), direction.y * static_cast<int>((1 - percent_from_centre) * most_angled_velocity.y + percent_from_centre * velocity_norm)};
-    
+    Vec2<double> most_angled_velocity = (Vec2<double>) {speed * std::sin(M_PI / 4), speed * std::cos(M_PI / 4)}; // first application of analysis
+    Vec2<int> final_velocity = (Vec2<int>) {direction.x * static_cast<int>(percent_from_centre * most_angled_velocity.x + (1 - percent_from_centre) * speed), direction.y * static_cast<int>(percent_from_centre * most_angled_velocity.y)};
+    final_velocity.x = static_cast<int>(direction.x * static_cast<double>(speed) * std::cos(angle));
+    final_velocity.y = static_cast<int>(direction.y * static_cast<double>(speed) * std::sin(angle));
+    // printf("distanct %f, percent %f, angle %f\n", distance_from_centre, percent_from_centre, angle);
+
     if (final_velocity.x == 0)
     {
         final_velocity.x = direction.x;
     }
 
+    // printf("velocity (%d, %d)\n", final_velocity.x, final_velocity.y);
     return final_velocity;
 }
 
