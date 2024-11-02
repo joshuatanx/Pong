@@ -1,7 +1,7 @@
 # Pong++
 A recreation of _Pong_ in C++, using the SDL2 framework.
 
-This game encorporates the defining elements of _Pong_ while introducing an additional game mode with multiple balls.
+This game incorporates the defining elements of _Pong_ while introducing an additional game mode with multiple balls.
 ## Setup
 ### 1) Cloning the repository
 ```
