@@ -687,11 +687,11 @@
 			[
 				{
 					"name" : "HELPSTRING",
-					"value" : "Minimum OS X version to target for deployment (at runtime); newer APIs weak linked. Set to empty string for default value."
+					"value" : "Minimum OS X deployment version"
 				}
 			],
 			"type" : "STRING",
-			"value" : "14.1"
+			"value" : "10.14"
 		},
 		{
 			"name" : "CMAKE_OSX_SYSROOT",

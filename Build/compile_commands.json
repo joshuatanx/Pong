@@ -1,49 +1,49 @@
 [
 {
   "directory": "/Users/joshuatan/Documents/Programming/C++/Pong/build",
-  "command": "/usr/bin/clang++  -I/opt/homebrew/Cellar/sdl2/2.30.8/include/SDL2 -I/opt/homebrew/Cellar/sdl2_ttf/2.22.0/include/SDL2 -I/opt/homebrew/Cellar/sdl2_image/2.8.2_2/include/SDL2 -I/opt/homebrew/include -g -std=gnu++17 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk -mmacosx-version-min=10.15 -mmacosx-version-min=10.15 -o CMakeFiles/Pong++.dir/src/Ball.cpp.o -c /Users/joshuatan/Documents/Programming/C++/Pong/src/Ball.cpp",
+  "command": "/usr/bin/clang++  -I/opt/homebrew/Cellar/sdl2/2.30.8/include/SDL2 -I/opt/homebrew/Cellar/sdl2_ttf/2.22.0/include/SDL2 -I/opt/homebrew/Cellar/sdl2_image/2.8.2_2/include/SDL2 -I/opt/homebrew/include -g -std=gnu++17 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk -mmacosx-version-min=10.14 -mmacosx-version-min=10.15 -o CMakeFiles/Pong++.dir/src/Ball.cpp.o -c /Users/joshuatan/Documents/Programming/C++/Pong/src/Ball.cpp",
   "file": "/Users/joshuatan/Documents/Programming/C++/Pong/src/Ball.cpp",
   "output": "CMakeFiles/Pong++.dir/src/Ball.cpp.o"
 },
 {
   "directory": "/Users/joshuatan/Documents/Programming/C++/Pong/build",
-  "command": "/usr/bin/clang++  -I/opt/homebrew/Cellar/sdl2/2.30.8/include/SDL2 -I/opt/homebrew/Cellar/sdl2_ttf/2.22.0/include/SDL2 -I/opt/homebrew/Cellar/sdl2_image/2.8.2_2/include/SDL2 -I/opt/homebrew/include -g -std=gnu++17 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk -mmacosx-version-min=10.15 -mmacosx-version-min=10.15 -o CMakeFiles/Pong++.dir/src/Draw.cpp.o -c /Users/joshuatan/Documents/Programming/C++/Pong/src/Draw.cpp",
+  "command": "/usr/bin/clang++  -I/opt/homebrew/Cellar/sdl2/2.30.8/include/SDL2 -I/opt/homebrew/Cellar/sdl2_ttf/2.22.0/include/SDL2 -I/opt/homebrew/Cellar/sdl2_image/2.8.2_2/include/SDL2 -I/opt/homebrew/include -g -std=gnu++17 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk -mmacosx-version-min=10.14 -mmacosx-version-min=10.15 -o CMakeFiles/Pong++.dir/src/Draw.cpp.o -c /Users/joshuatan/Documents/Programming/C++/Pong/src/Draw.cpp",
   "file": "/Users/joshuatan/Documents/Programming/C++/Pong/src/Draw.cpp",
   "output": "CMakeFiles/Pong++.dir/src/Draw.cpp.o"
 },
 {
   "directory": "/Users/joshuatan/Documents/Programming/C++/Pong/build",
-  "command": "/usr/bin/clang++  -I/opt/homebrew/Cellar/sdl2/2.30.8/include/SDL2 -I/opt/homebrew/Cellar/sdl2_ttf/2.22.0/include/SDL2 -I/opt/homebrew/Cellar/sdl2_image/2.8.2_2/include/SDL2 -I/opt/homebrew/include -g -std=gnu++17 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk -mmacosx-version-min=10.15 -mmacosx-version-min=10.15 -o CMakeFiles/Pong++.dir/src/Game.cpp.o -c /Users/joshuatan/Documents/Programming/C++/Pong/src/Game.cpp",
+  "command": "/usr/bin/clang++  -I/opt/homebrew/Cellar/sdl2/2.30.8/include/SDL2 -I/opt/homebrew/Cellar/sdl2_ttf/2.22.0/include/SDL2 -I/opt/homebrew/Cellar/sdl2_image/2.8.2_2/include/SDL2 -I/opt/homebrew/include -g -std=gnu++17 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk -mmacosx-version-min=10.14 -mmacosx-version-min=10.15 -o CMakeFiles/Pong++.dir/src/Game.cpp.o -c /Users/joshuatan/Documents/Programming/C++/Pong/src/Game.cpp",
   "file": "/Users/joshuatan/Documents/Programming/C++/Pong/src/Game.cpp",
   "output": "CMakeFiles/Pong++.dir/src/Game.cpp.o"
 },
 {
   "directory": "/Users/joshuatan/Documents/Programming/C++/Pong/build",
-  "command": "/usr/bin/clang++  -I/opt/homebrew/Cellar/sdl2/2.30.8/include/SDL2 -I/opt/homebrew/Cellar/sdl2_ttf/2.22.0/include/SDL2 -I/opt/homebrew/Cellar/sdl2_image/2.8.2_2/include/SDL2 -I/opt/homebrew/include -g -std=gnu++17 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk -mmacosx-version-min=10.15 -mmacosx-version-min=10.15 -o CMakeFiles/Pong++.dir/src/InputHandler.cpp.o -c /Users/joshuatan/Documents/Programming/C++/Pong/src/InputHandler.cpp",
+  "command": "/usr/bin/clang++  -I/opt/homebrew/Cellar/sdl2/2.30.8/include/SDL2 -I/opt/homebrew/Cellar/sdl2_ttf/2.22.0/include/SDL2 -I/opt/homebrew/Cellar/sdl2_image/2.8.2_2/include/SDL2 -I/opt/homebrew/include -g -std=gnu++17 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk -mmacosx-version-min=10.14 -mmacosx-version-min=10.15 -o CMakeFiles/Pong++.dir/src/InputHandler.cpp.o -c /Users/joshuatan/Documents/Programming/C++/Pong/src/InputHandler.cpp",
   "file": "/Users/joshuatan/Documents/Programming/C++/Pong/src/InputHandler.cpp",
   "output": "CMakeFiles/Pong++.dir/src/InputHandler.cpp.o"
 },
 {
   "directory": "/Users/joshuatan/Documents/Programming/C++/Pong/build",
-  "command": "/usr/bin/clang++  -I/opt/homebrew/Cellar/sdl2/2.30.8/include/SDL2 -I/opt/homebrew/Cellar/sdl2_ttf/2.22.0/include/SDL2 -I/opt/homebrew/Cellar/sdl2_image/2.8.2_2/include/SDL2 -I/opt/homebrew/include -g -std=gnu++17 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk -mmacosx-version-min=10.15 -mmacosx-version-min=10.15 -o CMakeFiles/Pong++.dir/src/Interface.cpp.o -c /Users/joshuatan/Documents/Programming/C++/Pong/src/Interface.cpp",
+  "command": "/usr/bin/clang++  -I/opt/homebrew/Cellar/sdl2/2.30.8/include/SDL2 -I/opt/homebrew/Cellar/sdl2_ttf/2.22.0/include/SDL2 -I/opt/homebrew/Cellar/sdl2_image/2.8.2_2/include/SDL2 -I/opt/homebrew/include -g -std=gnu++17 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk -mmacosx-version-min=10.14 -mmacosx-version-min=10.15 -o CMakeFiles/Pong++.dir/src/Interface.cpp.o -c /Users/joshuatan/Documents/Programming/C++/Pong/src/Interface.cpp",
   "file": "/Users/joshuatan/Documents/Programming/C++/Pong/src/Interface.cpp",
   "output": "CMakeFiles/Pong++.dir/src/Interface.cpp.o"
 },
 {
   "directory": "/Users/joshuatan/Documents/Programming/C++/Pong/build",
-  "command": "/usr/bin/clang++  -I/opt/homebrew/Cellar/sdl2/2.30.8/include/SDL2 -I/opt/homebrew/Cellar/sdl2_ttf/2.22.0/include/SDL2 -I/opt/homebrew/Cellar/sdl2_image/2.8.2_2/include/SDL2 -I/opt/homebrew/include -g -std=gnu++17 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk -mmacosx-version-min=10.15 -mmacosx-version-min=10.15 -o CMakeFiles/Pong++.dir/src/Paddle.cpp.o -c /Users/joshuatan/Documents/Programming/C++/Pong/src/Paddle.cpp",
+  "command": "/usr/bin/clang++  -I/opt/homebrew/Cellar/sdl2/2.30.8/include/SDL2 -I/opt/homebrew/Cellar/sdl2_ttf/2.22.0/include/SDL2 -I/opt/homebrew/Cellar/sdl2_image/2.8.2_2/include/SDL2 -I/opt/homebrew/include -g -std=gnu++17 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk -mmacosx-version-min=10.14 -mmacosx-version-min=10.15 -o CMakeFiles/Pong++.dir/src/Paddle.cpp.o -c /Users/joshuatan/Documents/Programming/C++/Pong/src/Paddle.cpp",
   "file": "/Users/joshuatan/Documents/Programming/C++/Pong/src/Paddle.cpp",
   "output": "CMakeFiles/Pong++.dir/src/Paddle.cpp.o"
 },
 {
   "directory": "/Users/joshuatan/Documents/Programming/C++/Pong/build",
-  "command": "/usr/bin/clang++  -I/opt/homebrew/Cellar/sdl2/2.30.8/include/SDL2 -I/opt/homebrew/Cellar/sdl2_ttf/2.22.0/include/SDL2 -I/opt/homebrew/Cellar/sdl2_image/2.8.2_2/include/SDL2 -I/opt/homebrew/include -g -std=gnu++17 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk -mmacosx-version-min=10.15 -mmacosx-version-min=10.15 -o CMakeFiles/Pong++.dir/src/TextureManager.cpp.o -c /Users/joshuatan/Documents/Programming/C++/Pong/src/TextureManager.cpp",
+  "command": "/usr/bin/clang++  -I/opt/homebrew/Cellar/sdl2/2.30.8/include/SDL2 -I/opt/homebrew/Cellar/sdl2_ttf/2.22.0/include/SDL2 -I/opt/homebrew/Cellar/sdl2_image/2.8.2_2/include/SDL2 -I/opt/homebrew/include -g -std=gnu++17 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk -mmacosx-version-min=10.14 -mmacosx-version-min=10.15 -o CMakeFiles/Pong++.dir/src/TextureManager.cpp.o -c /Users/joshuatan/Documents/Programming/C++/Pong/src/TextureManager.cpp",
   "file": "/Users/joshuatan/Documents/Programming/C++/Pong/src/TextureManager.cpp",
   "output": "CMakeFiles/Pong++.dir/src/TextureManager.cpp.o"
 },
 {
   "directory": "/Users/joshuatan/Documents/Programming/C++/Pong/build",
-  "command": "/usr/bin/clang++  -I/opt/homebrew/Cellar/sdl2/2.30.8/include/SDL2 -I/opt/homebrew/Cellar/sdl2_ttf/2.22.0/include/SDL2 -I/opt/homebrew/Cellar/sdl2_image/2.8.2_2/include/SDL2 -I/opt/homebrew/include -g -std=gnu++17 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk -mmacosx-version-min=10.15 -mmacosx-version-min=10.15 -o CMakeFiles/Pong++.dir/src/main.cpp.o -c /Users/joshuatan/Documents/Programming/C++/Pong/src/main.cpp",
+  "command": "/usr/bin/clang++  -I/opt/homebrew/Cellar/sdl2/2.30.8/include/SDL2 -I/opt/homebrew/Cellar/sdl2_ttf/2.22.0/include/SDL2 -I/opt/homebrew/Cellar/sdl2_image/2.8.2_2/include/SDL2 -I/opt/homebrew/include -g -std=gnu++17 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk -mmacosx-version-min=10.14 -mmacosx-version-min=10.15 -o CMakeFiles/Pong++.dir/src/main.cpp.o -c /Users/joshuatan/Documents/Programming/C++/Pong/src/main.cpp",
   "file": "/Users/joshuatan/Documents/Programming/C++/Pong/src/main.cpp",
   "output": "CMakeFiles/Pong++.dir/src/main.cpp.o"
 }

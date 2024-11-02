@@ -8,8 +8,8 @@ add_compile_options(-mmacosx-version-min=10.15)
 # Set C++ Standard
 set(CMAKE_CXX_STANDARD 17)
 
-# Set minimum MacOS version
-set(CMAKE_OSX_DEPLOYMENT_TARGET "10.15")
+# Set the minimum required macOS version
+set(CMAKE_OSX_DEPLOYMENT_TARGET "10.14" CACHE STRING "Minimum OS X deployment version" FORCE)
 
 # Include SDL2
 include_directories(/opt/homebrew/Cellar/sdl2/2.30.8/include/SDL2)

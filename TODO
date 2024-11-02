@@ -1,9 +1,9 @@
 Todo:
-  ☐ Un-hard-code paddle speed
   ☐ Add glyph-based font rendering
 	☐ Rework texture manager
 
 Archive:
+  ✔ Un-hard-code paddle speed @done(24-11-02 23:07) @project(Todo)
   ✔ Fix collision issues @done(24-11-02 21:44) @project(Todo)
   ✔ Add impact angle on ball collisions @started(24-11-02 15:59) @done(24-11-02 21:44) @lasted(5h45m20s) @project(Todo)
   ✔ Add multi-ball support @done(24-11-02 15:55)
