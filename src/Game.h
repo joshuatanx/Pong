@@ -17,7 +17,7 @@ class Game
 public:
     bool init(const std::string title, const Vec2<int> position, const Vec2<int> size, const bool fullscreen = false);
 
-    void newGame();
+    void newGame(const GameMode game_mode = Standard);
     void newRound();
     void start();
 
@@ -68,12 +68,14 @@ public:
     static std::vector<Paddle> paddles;
     static Paddle player;
     static Paddle opponent;
+    static std::vector<Ball> balls;
     static Ball ball;
 
 private:
     static int points_player;
     static int points_opponent;
     static GameState game_state;
+    static GameMode game_mode;
     bool run_status;
     bool round_status;
     SDL_Window* window;

@@ -45,7 +45,7 @@ void Interface::drawNet()
 void Interface::drawPauseScreen()
 {
     drawScore(Game::getPlayerPoints(), Game::getOpponentPoints());
-    Draw::stripedRectangle(SCREEN_WIDTH / 2 - 3, 0, 6, SCREEN_HEIGHT, (Colour) {255, 255, 255, 100}, true, Up, 10, 25);
+    // Draw::stripedRectangle(SCREEN_WIDTH / 2 - 3, 0, 6, SCREEN_HEIGHT, (Colour) {255, 255, 255, 100}, true, Up, 10, 25);
     TextureManager::renderText("Press Escape to resume.", (SDL_Rect) {SCREEN_WIDTH / 2 - 200, SCREEN_HEIGHT / 2 + 100, 400, 24});
 }
 
@@ -75,6 +75,7 @@ void Interface::render()
 
     case Paused:
         drawPauseScreen();
+        drawNet();
         break;
     
     case GameOver:

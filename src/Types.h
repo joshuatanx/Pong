@@ -43,6 +43,13 @@ enum GameState
     GameOver
 };
 
+enum GameMode
+{
+    Standard,
+    Plus,
+    PlusPlus
+};
+
 // Movement
 enum Direction
 {

@@ -3,6 +3,7 @@
 #include "Game.h"
 
 #include <cstdint>
+#include <math.h>
 #include <memory>
 #include <SDL_image.h>
 #include <SDL_ttf.h>
@@ -21,10 +22,12 @@ Interface Game::interface;
 Paddle Game::player;
 Paddle Game::opponent;
 Ball Game::ball;
+std::vector<Ball> Game::balls;
 
 int Game::points_player;
 int Game::points_opponent;
 GameState Game::game_state;
+GameMode Game::game_mode;
 
 bool Game::init(const std::string title, const Vec2<int> position, const Vec2<int> size, const bool fullscreen)
 {
@@ -97,7 +100,7 @@ bool Game::init(const std::string title, const Vec2<int> position, const Vec2<in
     TextureManager::loadFontStyle("assets/fonts/Vogue.ttf", "Vogue", 16, (SDL_Colour) {255, 255, 255});
     printf("Font initialized.\n");
 
-    ball.setOutOfBoundsCallback([this]() {this->newRound();});
+    // ball.setOutOfBoundsCallback([this]() {this->newRound();});
     game_state = SelectGameMode;
 
     run_status = true;
@@ -107,11 +110,43 @@ bool Game::init(const std::string title, const Vec2<int> position, const Vec2<in
     return true;
 }
 
-void Game::newGame()
+void Game::newGame(const GameMode game_mode)
 {
+    printf("new game\n");
     player.init(Player1, (Vec2<int>) {0, 250}, (Vec2<unsigned int>) {12, 100}, (Colour) {255, 255, 255, 255});
     opponent.init(Player2, (Vec2<int>) {588, 250}, (Vec2<unsigned int>) {12, 100}, (Colour) {255, 255, 255, 255});
-    ball.init((Vec2<int>) {294, 0}, (Vec2<unsigned int>) {12, 12}, (Colour) {255, 255, 255, 255});
+    balls.clear();
+
+    switch (game_mode)
+    {
+    case Standard:
+        balls.push_back(Ball());
+        balls[balls.size() - 1].init((Vec2<int>) {294, 0}, (Vec2<unsigned int>) {12, 12}, (Colour) {255, 255, 255, 255}, (Vec2<int>) {static_cast<int>(SCREEN_WIDTH / 2) - 6, static_cast<int>(SCREEN_HEIGHT / 2) - 6});
+        break;
+
+    case Plus:
+        balls.push_back(Ball());
+        balls[balls.size() - 1].init((Vec2<int>) {294, 0}, (Vec2<unsigned int>) {12, 12}, (Colour) {255, 255, 255, 255}, (Vec2<int>) {static_cast<int>(SCREEN_WIDTH / 2) - 6, static_cast<int>(SCREEN_HEIGHT / 3) - 6});
+        balls.push_back(Ball());
+        balls[balls.size() - 1].init((Vec2<int>) {294, 50}, (Vec2<unsigned int>) {12, 12}, (Colour) {255, 255, 255, 255}, (Vec2<int>) {static_cast<int>(SCREEN_WIDTH / 2) - 6, static_cast<int>(SCREEN_HEIGHT / 3 * 2) - 6});
+        break;
+
+    case PlusPlus:
+        balls.push_back(Ball());
+        balls[balls.size() - 1].init((Vec2<int>) {294, 0}, (Vec2<unsigned int>) {12, 12}, (Colour) {255, 255, 255, 255}, (Vec2<int>) {static_cast<int>(SCREEN_WIDTH / 2) - 6, static_cast<int>(SCREEN_HEIGHT / 4) - 6});
+        balls.push_back(Ball());
+        balls[balls.size() - 1].init((Vec2<int>) {294, 50}, (Vec2<unsigned int>) {12, 12}, (Colour) {255, 255, 255, 255}, (Vec2<int>) {static_cast<int>(SCREEN_WIDTH / 2) - 6, static_cast<int>(SCREEN_HEIGHT / 4 * 2) - 6});
+        balls.push_back(Ball());
+        balls[balls.size() - 1].init((Vec2<int>) {294, 100}, (Vec2<unsigned int>) {12, 12}, (Colour) {255, 255, 255, 255}, (Vec2<int>) {static_cast<int>(SCREEN_WIDTH / 2) - 6, static_cast<int>(SCREEN_HEIGHT / 4 * 3) - 6});
+    
+    default:
+        break;
+    }
+
+    for (int i = 0; i < balls.size(); i++)
+    {
+        balls[i].setOutOfBoundsCallback([this]() {this->newRound();});
+    }
     
     points_player = 0;
     points_opponent = 0;
@@ -120,15 +155,23 @@ void Game::newGame()
 
 void Game::newRound()
 {
-    ball.reset();
+    for (int i = 0; i < balls.size(); i++)
+    {
+        balls[i].reset();
+    }
 
     round_status = false;
     game_state = Ready;
 }
 
 void Game::start()
-{
-    ball.setVelocity((Vec2<int>) {5, 5});
+{  
+    for (int i = 0; i < balls.size(); i++)
+    {
+        int speed = balls[i].getSpeed() * std::pow(-1, i);
+        printf("%d\n", speed);
+        balls[i].setVelocity((Vec2<int>) {speed, speed});
+    }
     round_status = true;
     game_state = Playing;
 }
@@ -173,7 +216,16 @@ void Game::pause()
     game_state = Paused;
     player.freeze();
     opponent.freeze();
-    ball.freeze();
+    /* ball.freeze(); */
+    /* for (Ball it : balls)
+    {
+        it.freeze();
+    } */
+
+    for (int i = 0; i < balls.size(); i++)
+    {
+        balls[i].freeze();
+    }
 }
 
 void Game::resume()
@@ -181,7 +233,15 @@ void Game::resume()
     game_state = Playing;
     player.unfreeze();
     opponent.unfreeze();
-    ball.unfreeze();
+    //ball.unfreeze();
+    /* for (Ball it : balls)
+    {
+        it.unfreeze();
+    } */
+   for (int i = 0; i < balls.size(); i++)
+    {
+        balls[i].unfreeze();
+    }
 }
 
 void Game::processInput()
@@ -200,10 +260,20 @@ void Game::processInput()
         switch (game_state)
         {
         case SelectGameMode:
-            printf("hi\n");
             if (InputHandler::isActive(SDLK_1))
             {
-                newGame();
+                game_mode = Standard;
+                newGame(game_mode);
+            }
+            else if (InputHandler::isActive(SDLK_2))
+            {
+                game_mode = Plus;
+                newGame(game_mode);
+            }
+            else if (InputHandler::isActive(SDLK_3))
+            {
+                game_mode = PlusPlus;
+                newGame(game_mode);
             }
             break;
 
@@ -247,7 +317,15 @@ void Game::update()
     case Playing:
         player.update();
         opponent.update();
-        ball.update();
+        /* for (Ball it : balls)
+        {
+            it.update();
+        } */
+       for (int i = 0; i < balls.size(); i++)
+        {
+            balls[i].update();
+        }
+        //ball.update();
         break;
 
     default:
@@ -271,20 +349,44 @@ void Game::render(const float interpolation)
         interface.render();
         player.render(interpolation);
         opponent.render(interpolation);
-        ball.render(interpolation);
+        /* for (Ball it : balls)
+        {
+            it.render(interpolation);
+        } */
+        for (int i = 0; i < balls.size(); i++)
+        {
+            balls[i].render(interpolation);
+        }
+        //ball.render(interpolation);
         break;
 
     case Playing:
         player.render(interpolation);
         opponent.render(interpolation);
-        ball.render(interpolation);
+        //ball.render(interpolation);
+        /* for (Ball it : balls)
+        {
+            it.render(interpolation);
+        } */
+        for (int i = 0; i < balls.size(); i++)
+        {
+            balls[i].render(interpolation);
+        }
         interface.render();
         break;
     
     case Paused:
         player.render(interpolation);
         opponent.render(interpolation);
-        ball.render(interpolation);
+        //ball.render(interpolation);
+        /* for (Ball it : balls)
+        {
+            it.render(interpolation);
+        } */
+        for (int i = 0; i < balls.size(); i++)
+        {
+            balls[i].render(interpolation);
+        }
         interface.render();
 
     case GameOver:

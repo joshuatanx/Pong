@@ -6,11 +6,13 @@
 
 #include "Game.h"
 
-void Ball::init(const Vec2<int> position, const Vec2<unsigned int> size, const Colour colour)
+void Ball::init(const Vec2<int> position, const Vec2<unsigned int> size, const Colour colour, const Vec2<int> default_position, const unsigned int speed)
 {
     this->position = position;
+    this->default_position = default_position;
     this->size = size;
     this->colour = colour;
+    this->speed = speed;
     velocity = (Vec2<int>) {0, 0};
 }
     
@@ -22,6 +24,16 @@ Vec2<int> Ball::getPosition()
 void Ball::setPosition(const Vec2<int> position)
 {
     this->position = position;
+}
+
+Vec2<int> Ball::getDefaultPosition()
+{
+    return position;
+}
+
+void Ball::setDefaultPosition(const Vec2<int> position)
+{
+    this->default_position = position;
 }
 
 Vec2<unsigned int> Ball::getSize()
@@ -42,6 +54,16 @@ Colour Ball::getColour()
 void Ball::setColour(const Colour colour)
 {
     this->colour = colour;
+}
+
+unsigned int Ball::getSpeed()
+{
+    return speed;
+}
+
+void Ball::setSpeed(const unsigned int speed)
+{
+    this->speed = speed;
 }
 
 Vec2<int> Ball::getVelocity()
@@ -183,7 +205,8 @@ bool Ball::updateScore()
 
 void Ball::reset()
 {
-    position = (Vec2<int>) {(SCREEN_WIDTH - static_cast<int>(size.x)) / 2, (SCREEN_HEIGHT - static_cast<int>(size.y)) / 2};
+    //position = (Vec2<int>) {(SCREEN_WIDTH - static_cast<int>(size.x)) / 2, (SCREEN_HEIGHT - static_cast<int>(size.y)) / 2};
+    position = default_position;
     velocity = (Vec2<int>) {0, 0};
 }
 
@@ -196,7 +219,7 @@ void Ball::move(const Vec2<int> displacement)
 void Ball::update()
 {   
     if (!isFrozen())
-    {
+    {   
         move(velocity);
     }
 
