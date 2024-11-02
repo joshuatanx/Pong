@@ -281,11 +281,11 @@ void Game::processInput()
                 game_mode = Plus;
                 newGame(game_mode);
             }
-            else if (InputHandler::isActive(SDLK_3))
+            /* else if (InputHandler::isActive(SDLK_3))
             {
                 game_mode = PlusPlus;
                 newGame(game_mode);
-            }
+            } */
             break;
 
         case Ready:
