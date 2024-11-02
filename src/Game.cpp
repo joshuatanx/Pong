@@ -316,15 +316,10 @@ void Game::update()
     case Playing:
         player.update();
         opponent.update();
-        /* for (Ball it : balls)
-        {
-            it.update();
-        } */
-       for (int i = 0; i < balls.size(); i++)
+        for (int i = 0; i < balls.size(); i++)
         {
             balls[i].update();
         }
-        //ball.update();
         break;
 
     default:
@@ -348,25 +343,15 @@ void Game::render(const float interpolation)
         interface.render();
         player.render(interpolation);
         opponent.render(interpolation);
-        /* for (Ball it : balls)
-        {
-            it.render(interpolation);
-        } */
         for (int i = 0; i < balls.size(); i++)
         {
             balls[i].render(interpolation);
         }
-        //ball.render(interpolation);
         break;
 
     case Playing:
         player.render(interpolation);
         opponent.render(interpolation);
-        //ball.render(interpolation);
-        /* for (Ball it : balls)
-        {
-            it.render(interpolation);
-        } */
         for (int i = 0; i < balls.size(); i++)
         {
             balls[i].render(interpolation);
@@ -377,11 +362,6 @@ void Game::render(const float interpolation)
     case Paused:
         player.render(interpolation);
         opponent.render(interpolation);
-        //ball.render(interpolation);
-        /* for (Ball it : balls)
-        {
-            it.render(interpolation);
-        } */
         for (int i = 0; i < balls.size(); i++)
         {
             balls[i].render(interpolation);

@@ -136,16 +136,6 @@ Direction Ball::collisionWithPaddle(Paddle paddle)
     return None;
 }
 
-float Ball::angleOfCollision(Paddle paddle, Direction side_of_impact)
-{
-    PaddleType paddle_type = paddle.getPaddleType();
-    Vec2<int> paddle_position = paddle.getPosition();
-    Vec2<unsigned int> paddle_size = paddle.getSize();
-
-    float distance_from_centre = (position.y + size.y / 2) - (paddle_position.y + paddle_size.y / 2);
-    return (distance_from_centre / (paddle_size.y / 2)) * M_PI_2;
-}
-
 Vec2<int> Ball::velocityAfterCollision(Paddle paddle)
 {
     PaddleType paddle_type = paddle.getPaddleType();
@@ -171,9 +161,9 @@ Vec2<int> Ball::velocityAfterCollision(Paddle paddle)
         direction.y = -1;
     }
 
-    float distance_from_centre = (position.y + size.y / 2) - (paddle_position.y + paddle_size.y / 2);
+    float distance_from_centre = (static_cast<float>(position.y) + static_cast<float>(size.y) / 2) - (static_cast<float>(paddle_position.y) + static_cast<float>(paddle_size.y) / 2);
     float percent_from_centre = std::abs(distance_from_centre / (paddle_size.y / 2));
-    float velocity_norm = std::sqrt(std::pow(velocity.x, 2) + std::pow(velocity.y, 2));
+    float velocity_norm = std::sqrt(2 * std::pow(speed, 2));
 
     Vec2<double> most_angled_velocity = (Vec2<double>) {velocity_norm * std::sin(M_PI / 4), velocity_norm * std::cos(M_PI / 4)}; // first application of analysis
     Vec2<int> final_velocity = (Vec2<int>) {direction.x * static_cast<int>(percent_from_centre * most_angled_velocity.x + (1 - percent_from_centre) * velocity_norm), direction.y * static_cast<int>((1 - percent_from_centre) * most_angled_velocity.y + percent_from_centre * velocity_norm)};
@@ -182,8 +172,6 @@ Vec2<int> Ball::velocityAfterCollision(Paddle paddle)
     {
         final_velocity.x = direction.x;
     }
-
-    printf("distance %f, percent %f, norm %f, most angled velocity (%f, %f), final velocity (%d, %d)\n", distance_from_centre, percent_from_centre, velocity_norm, most_angled_velocity.x, most_angled_velocity.y, final_velocity.x, final_velocity.y);
 
     return final_velocity;
 }
@@ -275,6 +263,15 @@ void Ball::move(const Vec2<int> displacement)
 {
     position.x += displacement.x;
     position.y += displacement.y;
+
+    /* if (collisionWithPaddle(Game::player) != None)
+    {
+        position.x = Game::player.getPosition().x + Game::player.getSize().x;
+    }
+    else if (collisionWithPaddle(Game::opponent) != None)
+    {
+        position.x = Game::player.getPosition().x - size.x;
+    } */
 }
 
 void Ball::update()
