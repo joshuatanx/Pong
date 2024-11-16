@@ -1,3 +1,0 @@
-/Users/joshuatan/Documents/Programming/C++/Pong/build/CMakeFiles/Pong++.dir
-/Users/joshuatan/Documents/Programming/C++/Pong/build/CMakeFiles/edit_cache.dir
-/Users/joshuatan/Documents/Programming/C++/Pong/build/CMakeFiles/rebuild_cache.dir
